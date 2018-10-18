@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ChatBox</string>
+    <string name="chat">CHATS</string>
+    <string name="status">STATUS</string>
+    <string name="call">CALLS</string>
+    <string name="camera">Camera</string>
+    <string name="name">Name</string>
+    <string name="about">About</string>
+    <string name="profileImage">ProfileImage</string>
+</resources>
