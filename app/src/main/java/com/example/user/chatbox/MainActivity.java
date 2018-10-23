@@ -176,6 +176,13 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
             onBackPressed();
+            return true;
+        }
+
+        if (item.getItemId() == R.id.setting){
+            Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+            startActivity(intent);
+
         }
         return false;
     }

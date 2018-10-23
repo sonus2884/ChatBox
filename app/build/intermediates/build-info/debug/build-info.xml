@@ -2,55 +2,43 @@
 <instant-run
     abi="x86"
     api-level="25"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="560dpi"
     format="10"
     plugin-version="3.2.1"
-    timestamp="1540294755719"
+    timestamp="1540298892293"
     token="-3787057203046464193"
-    verifier="IMPLEMENTED_INTERFACES_CHANGE" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="513" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="119" />
+        duration="0" />
     <task
         name="verifier"
-        duration="64" />
+        duration="0" />
 
     <artifact
-        location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-        type="SPLIT" />
+        location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
 
     <build
         build-mode="FULL"
-        timestamp="1540294274296"
-        verifier="FULL_BUILD_REQUESTED" >
-        <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-        <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
+        timestamp="1540298407888"
+        verifier="MANIFEST_FILE_CHANGE" >
         <artifact
             location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
             type="SPLIT" />
         <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
             location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
@@ -59,22 +47,50 @@
             location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
             type="SPLIT" />
         <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_7.apk"
             type="SPLIT" />
         <artifact
             location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_8.apk"
+            type="SPLIT" />
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1540294755719"
-        verifier="IMPLEMENTED_INTERFACES_CHANGE" >
+        timestamp="1540298572020"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
-            type="SPLIT" />
+            location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1540298694024"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\builds\debug\1540298694024\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1540298892293"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
     </build>
 
 </instant-run>

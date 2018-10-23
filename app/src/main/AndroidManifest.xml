@@ -25,7 +25,8 @@
         </activity>
         <activity android:name=".SignUpActivity" />
         <activity android:name=".Camera2Activity" />
-        <activity android:name=".ChatsActivity"></activity>
+        <activity android:name=".ChatsActivity" />
+        <activity android:name=".ProfileActivity"></activity>
     </application>
 
 </manifest>
