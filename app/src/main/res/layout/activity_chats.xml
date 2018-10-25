@@ -27,22 +27,31 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_above="@id/cardView"
-        android:layout_below="@id/appbar"
+    <!-- <ScrollView
+         android:id="@+id/scrollView"
+         android:layout_above="@id/cardView"
+         android:layout_below="@id/appbar"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_weight="20">
+
+         <LinearLayout
+             android:id="@+id/layout1"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+
+         </LinearLayout>
+     </ScrollView>
+     -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="20">
+        android:layout_height="match_parent"
+        android:layout_above="@id/messageText"
+        android:layout_below="@id/appbar">
 
-        <LinearLayout
-            android:id="@+id/layout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-        </LinearLayout>
-    </ScrollView>
+    </android.support.v7.widget.RecyclerView>
 
     <ImageButton
         android:id="@+id/sendImage"
@@ -64,7 +73,7 @@
         android:src="@drawable/ic_send"
         android:visibility="invisible" />
 
-    <android.support.v7.widget.CardView
+    <!--<android.support.v7.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,19 +84,25 @@
         android:layout_toStartOf="@id/sendImage"
         android:layout_toLeftOf="@id/sendImage"
         app:cardCornerRadius="25dp">
-
-        <EditText
-            android:id="@+id/messageText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/transparent"
-            android:hint="Type a message"
-            android:inputType="text"
-            android:padding="14dp"
-            android:textColor="@color/colorBlack"
-            android:textSize="18sp" />
-
     </android.support.v7.widget.CardView>
+    -->
+
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_toStartOf="@id/sendImage"
+        android:layout_toLeftOf="@id/sendImage"
+        android:background="@drawable/round_bg"
+        android:hint="Type a message"
+        android:inputType="text"
+        android:padding="18dp"
+        android:textColor="@color/colorBlack"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

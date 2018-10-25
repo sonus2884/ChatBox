@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\9964c2667ad94c52fd923c1f4c812551\AndroidManifest.xml:2:1-6:12
 MERGED from [com.android.support:design:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-27.1.1.aar\31c3476b99425ee5f1376b195d23079a\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\16c7b5f418367031a108d155345d7759\AndroidManifest.xml:17:1-22:12
@@ -48,20 +48,20 @@ MERGED from [com.google.android.gms:play-services-base-license:11.8.0] C:\Users\
 MERGED from [com.google.firebase:firebase-storage-common-license:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-storage-common-license-11.8.0.aar\84079314f9234b9935dab4ee95bf425a\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-analytics-impl-license:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-analytics-impl-license-11.8.0.aar\da1c6a2164c584e566012e022ef04794\AndroidManifest.xml:2:1-6:12
 MERGED from [com.google.firebase:firebase-iid-license:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-license-11.8.0.aar\1b8a9782a4305cba20c0dca91d5ad2e9\AndroidManifest.xml:2:1-6:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
 	package
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-33:12
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:11-69
@@ -84,7 +84,7 @@ ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:7:5-80
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:9:5-30:19
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:9:5-31:19
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\9964c2667ad94c52fd923c1f4c812551\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-core:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-core-11.8.0.aar\9964c2667ad94c52fd923c1f4c812551\AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-auth:11.8.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-auth-11.8.0.aar\55f3ef2afc0c1eceeed2d67a7416acc6\AndroidManifest.xml:22:5-30:19
@@ -182,9 +182,13 @@ ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:28:9-51
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:28:19-48
 activity#com.example.user.chatbox.ProfileActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:9-62
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:9-53
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:19-50
+activity#com.example.user.chatbox.AboutUsActivity
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:9-62
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:19-50
 uses-sdk
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml

@@ -44,6 +44,7 @@
         <activity android:name="com.example.user.chatbox.Camera2Activity" />
         <activity android:name="com.example.user.chatbox.ChatsActivity" />
         <activity android:name="com.example.user.chatbox.ProfileActivity" />
+        <activity android:name="com.example.user.chatbox.AboutUsActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

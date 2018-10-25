@@ -2,17 +2,14 @@ package com.example.user.chatbox;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -22,7 +19,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ChatsActivity extends AppCompatActivity {
@@ -33,10 +32,16 @@ public class ChatsActivity extends AppCompatActivity {
     private DatabaseReference mReferenceSend;
     private DatabaseReference mReferenceReceive;
 
-    private Map map;
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private List<SendReceiveMsg> sendReceiveMessage;
+    private SendReceiveMsg sendReceiveMsg;
+    private ChatAdapter mAdapter;
+
+   // private Map map;
     private GenericTypeIndicator<Map<String, String>> genericTypeIndicator;
-    private LinearLayout layout;
-    private ScrollView scrollView;
+    // private LinearLayout layout;
+    // private ScrollView scrollView;
 
 
     @Override
@@ -44,10 +49,10 @@ public class ChatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chats);
 
-        layout = findViewById(R.id.layout1);
-        scrollView = findViewById(R.id.scrollView);
+        // layout = findViewById(R.id.layout1);
+        // scrollView = findViewById(R.id.scrollView);
         messageText = findViewById(R.id.messageText);
-        // recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         sendButton = findViewById(R.id.sendImage);
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -61,9 +66,14 @@ public class ChatsActivity extends AppCompatActivity {
             }
         });
 
-        map = new HashMap();
+       // map = new HashMap();
         genericTypeIndicator = new GenericTypeIndicator<Map<String, String>>() {
         };
+
+        recyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(mLayoutManager);
+        sendReceiveMessage = new ArrayList<>();
 
         mAuth = FirebaseAuth.getInstance();
         mReferenceSend = FirebaseDatabase.getInstance().getReference("Messages")
@@ -132,31 +142,44 @@ public class ChatsActivity extends AppCompatActivity {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                // msg.clear();
 
-
-                map.clear();
+                sendReceiveMessage.clear();
+                //map.clear();
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
-                    map = ds.getValue(genericTypeIndicator);
+                   Map map = ds.getValue(genericTypeIndicator);
 
                     String message = map.get("message").toString();
                     String user = map.get("user").toString();
 
+                  //  SendReceiveMsg msg = ds.getValue(SendReceiveMsg.class);
+
+                   // sendReceiveMessage.add(msg);
+
+                   // Log.i("_id",sendReceiveMessage.get(0).getId());
+
+
                     if (user.equals(MainActivity.name)) {
 
-                        Log.i("_msg", message);
-                        Log.i("_user", user);
-                        addMessageBox(message, 1);
+                        //Log.i("_msg", message);
+                       // Log.i("_user", user);
+                        sendReceiveMsg = new SendReceiveMsg(message, 1);
+                        sendReceiveMessage.add(sendReceiveMsg);
+                        // addMessageBox(message, 1);
 
 
                     } else {
 
-                        addMessageBox(message, 2);
+                        sendReceiveMsg = new SendReceiveMsg(message, 2);
+                        sendReceiveMessage.add(sendReceiveMsg);
+                        // addMessageBox(message, 2);
                     }
 
                 }
+
+                mAdapter = new ChatAdapter(ChatsActivity.this, sendReceiveMessage);
+                recyclerView.setAdapter(mAdapter);
 
 
             }
@@ -170,7 +193,7 @@ public class ChatsActivity extends AppCompatActivity {
 
     }
 
-    public void addMessageBox(String message, int type) {
+  /*  public void addMessageBox(String message, int type) {
         TextView textView = new TextView(ChatsActivity.this);
         textView.setText(message);
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
@@ -196,5 +219,6 @@ public class ChatsActivity extends AppCompatActivity {
         layout.addView(textView);
         scrollView.fullScroll(View.FOCUS_DOWN);
     }
+    */
 
 }

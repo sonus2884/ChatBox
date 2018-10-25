@@ -879,7 +879,10 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id about
 id aboutText
+id aboutTextImage
+id aboutUs
 id action0
 id action_bar
 id action_bar_activity_content
@@ -945,8 +948,8 @@ id design_navigation_view
 id dimensions
 id direct
 id disableHome
+id editAbout
 id editNameImage
-id editNameText
 id edit_query
 id emailText
 id emailTextWrapper
@@ -978,7 +981,6 @@ id invisible
 id italic
 id item_touch_helper_previous_elevation
 id largeLabel
-id layout1
 id left
 id light
 id line1
@@ -1021,8 +1023,10 @@ id progress_horizontal
 id radio
 id rePasswordText
 id rePasswordTextWrapper
+id receiveText
 id recyclerView
 id relativeLayout
+id relativeLayout1
 id right
 id right_icon
 id right_side
@@ -1047,6 +1051,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id sendImage
+id sendText
 id setting
 id shortcut
 id showCustom
@@ -1099,6 +1104,7 @@ id uniform
 id up
 id uploadButton
 id useLogo
+id view
 id view_offset_helper
 id visibilityOff
 id visibilityOn
@@ -1145,6 +1151,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_about_us
 layout activity_camera
 layout activity_camera2
 layout activity_chats
@@ -1168,6 +1175,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout header
+layout item_list
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action

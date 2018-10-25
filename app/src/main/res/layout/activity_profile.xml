@@ -45,6 +45,7 @@
             android:id="@+id/profile_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:onClick="editImage"
             android:src="@drawable/ic_person_black"
             app:civ_border_color="@color/colorLightW"
             app:civ_border_width="1dp"
@@ -55,32 +56,92 @@
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/relativeLayout"
         android:layout_marginTop="8dp"
         android:background="@drawable/background">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Name.."
-                android:id="@+id/editNameText"
-                android:textColor="@color/colorBlack"
-                android:textSize="18sp"
-                android:padding="12dp"
-                android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:hint="Name.."
+            android:padding="12dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
 
 
         <ImageView
+            android:id="@+id/editNameImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_edit"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:id="@+id/editNameImage"
-            android:layout_marginEnd="8dp"/>
+            android:onClick="editName"
+            android:src="@drawable/ic_edit" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background">
+
+
+        <TextView
+            android:id="@+id/aboutUs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Currently set to"
+            android:textColor="#4CAF50"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/aboutUs"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/colorGray">
+
+        </View>
+
+        <TextView
+
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:background="@android:color/transparent"
+            android:hint="About us..."
+            android:padding="12dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp" />
+
+
+        <ImageView
+            android:id="@+id/aboutTextImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="aboutUs"
+            android:src="@drawable/ic_edit" />
 
     </RelativeLayout>
 
