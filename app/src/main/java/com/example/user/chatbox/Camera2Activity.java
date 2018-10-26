@@ -120,7 +120,7 @@ public class Camera2Activity extends AppCompatActivity {
     public void upload(View view) {
 
         uploadImage();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
         startActivity(intent);
         finish();
     }

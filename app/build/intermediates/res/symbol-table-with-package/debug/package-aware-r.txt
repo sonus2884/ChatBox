@@ -817,6 +817,7 @@ drawable avd_show_password
 drawable background
 drawable bg_edit
 drawable border
+drawable chat_bg
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -959,12 +960,14 @@ id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
+id expanded_image
 id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
 id fixed
 id forever
+id frameLayout
 id ghost_view
 id gone
 id groups
@@ -1018,6 +1021,7 @@ id percent
 id pin
 id profileImageView
 id profile_image
+id profile_image_edit
 id progress_circular
 id progress_horizontal
 id radio
@@ -1175,7 +1179,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout header
-layout item_list
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
@@ -1191,12 +1194,14 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout receive_msg
 layout row_list
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout send_msg
 layout support_simple_spinner_dropdown_item
-menu logout
+menu item
 mipmap ic_launcher
 mipmap ic_launcher_round
 string abc_action_bar_home_description

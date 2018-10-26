@@ -100,6 +100,10 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\1bd482b48fcaf3493b239b49eb308433\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_chat_bg.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\drawable\\chat_bg.png"
+    },
+    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_list_menu_item_layout.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\layout\\abc_list_menu_item_layout.xml"
     },
@@ -604,10 +608,6 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\menu_logout.xml.flat",
-        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\menu\\logout.xml"
-    },
-    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_list_divider_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
     },
@@ -914,6 +914,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_text_light_focused.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\1bd482b48fcaf3493b239b49eb308433\\res\\drawable\\common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_send_msg.xml.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\layout\\send_msg.xml"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
@@ -1248,6 +1252,10 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\31c3476b99425ee5f1376b195d23079a\\res\\drawable-v21\\avd_hide_password.xml"
     },
     {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_receive_msg.xml.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\layout\\receive_msg.xml"
+    },
+    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout-watch-v20_abc_alert_dialog_title_material.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
     },
@@ -1518,10 +1526,6 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\layout\\abc_dialog_title_material.xml"
-    },
-    {
-        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_list.xml.flat",
-        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\layout\\item_list.xml"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_16dp.png.flat",
@@ -2042,6 +2046,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_abc_text_cursor_material.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\menu_item.xml.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\menu\\item.xml"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_common_google_signin_btn_icon_dark_normal_background.9.png.flat",

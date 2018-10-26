@@ -2,6 +2,7 @@ package com.example.user.chatbox;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
@@ -72,6 +73,7 @@ public class ChatsActivity extends AppCompatActivity {
 
         recyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
+
         recyclerView.setLayoutManager(mLayoutManager);
         sendReceiveMessage = new ArrayList<>();
 
@@ -81,6 +83,8 @@ public class ChatsActivity extends AppCompatActivity {
 
         mReferenceReceive = FirebaseDatabase.getInstance().getReference("Messages")
                 .child(RecyclerViewAdapter.name1 + "_" + MainActivity.name);
+
+
 
         retrieveMsg();
         init();
@@ -162,14 +166,12 @@ public class ChatsActivity extends AppCompatActivity {
 
                     if (user.equals(MainActivity.name)) {
 
-                        //Log.i("_msg", message);
-                       // Log.i("_user", user);
                         sendReceiveMsg = new SendReceiveMsg(message, 1);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 1);
 
 
-                    } else {
+                    } else{
 
                         sendReceiveMsg = new SendReceiveMsg(message, 2);
                         sendReceiveMessage.add(sendReceiveMsg);
@@ -178,8 +180,13 @@ public class ChatsActivity extends AppCompatActivity {
 
                 }
 
+
                 mAdapter = new ChatAdapter(ChatsActivity.this, sendReceiveMessage);
                 recyclerView.setAdapter(mAdapter);
+                recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
+
+
+
 
 
             }

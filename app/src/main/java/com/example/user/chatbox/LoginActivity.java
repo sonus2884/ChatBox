@@ -65,11 +65,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         mAuth = FirebaseAuth.getInstance();
 
-     /*  if(mAuth != null){
+       if( mAuth.getCurrentUser() != null){
+
             Intent intent = new Intent(LoginActivity.this,MainActivity.class);
            startActivity(intent);
+           finish();
          }
-         */
+
 
 
     }
@@ -114,6 +116,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             progressBar.setVisibility(View.INVISIBLE);
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
+                            finish();
                         } else {
                             progressBar.setVisibility(View.INVISIBLE);
                             Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();

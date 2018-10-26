@@ -1,13 +1,21 @@
 package com.example.user.chatbox;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Point;
+import android.graphics.Rect;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -22,6 +30,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
     private List<UserDetail> userDetails;
     public static String name1;
+    private Animator mCurrentAnimator;
+    private int mShortAnimationDuration;
+
+
 
     public RecyclerViewAdapter(Context context, List<UserDetail> details) {
 
@@ -65,6 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                // Intent intent = new Intent(mContext,Camera2Activity.class);
                // mContext.startActivity(intent);
                 Toast.makeText(mContext, detail.getName()+"'s Image", Toast.LENGTH_SHORT).show();
+
             }
         });
 
@@ -90,6 +103,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView nameText;
         TextView aboutText;
         LinearLayout mLinearLayout;
+        //ImageView extendedImage;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -98,6 +112,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             nameText = itemView.findViewById(R.id.nameText);
             aboutText = itemView.findViewById(R.id.aboutText);
             mLinearLayout = itemView.findViewById(R.id.linear_layout);
+          //  extendedImage = itemView.findViewById(R.id.expanded_image);
         }
     }
+
+
 }

@@ -162,7 +162,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
-        getMenuInflater().inflate(R.menu.logout, menu);
+        getMenuInflater().inflate(R.menu.item, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -173,18 +173,21 @@ public class MainActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.logOut) {
 
             FirebaseAuth.getInstance().signOut();
+
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
-            onBackPressed();
+            finish();
+            //onBackPressed();
             return true;
         }
 
         if (item.getItemId() == R.id.setting){
             Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
             startActivity(intent);
+            return true;
 
         }
-        return false;
+        return true;
     }
 
 }

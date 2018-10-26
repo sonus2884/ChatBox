@@ -26,83 +26,71 @@
 
     </android.support.design.widget.AppBarLayout>
 
-
-    <!-- <ScrollView
-         android:id="@+id/scrollView"
-         android:layout_above="@id/cardView"
-         android:layout_below="@id/appbar"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:layout_weight="20">
-
-         <LinearLayout
-             android:id="@+id/layout1"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:orientation="vertical">
-
-         </LinearLayout>
-     </ScrollView>
-     -->
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/messageText"
-        android:layout_below="@id/appbar">
+        android:layout_below="@id/appbar"
+        android:background="@drawable/chat_bg">
 
-    </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/linear_layout"
+            android:layout_marginBottom="4dp"
+            android:scrollbars="vertical">
 
-    <ImageButton
-        android:id="@+id/sendImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/cardView"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/round_bg"
-        android:elevation="6dp"
-        android:onClick="send"
-        android:padding="10dp"
-        android:src="@drawable/ic_send"
-        android:visibility="invisible" />
+        </android.support.v7.widget.RecyclerView>
 
-    <!--<android.support.v7.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_toStartOf="@id/sendImage"
-        android:layout_toLeftOf="@id/sendImage"
-        app:cardCornerRadius="25dp">
-    </android.support.v7.widget.CardView>
-    -->
 
-    <EditText
-        android:id="@+id/messageText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_toStartOf="@id/sendImage"
-        android:layout_toLeftOf="@id/sendImage"
-        android:background="@drawable/round_bg"
-        android:hint="Type a message"
-        android:inputType="text"
-        android:padding="18dp"
-        android:textColor="@color/colorBlack"
-        android:textSize="18sp" />
+        <RelativeLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/transparent"
+            android:orientation="horizontal">
+
+
+            <EditText
+                android:id="@+id/messageText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_toStartOf="@id/sendImage"
+                android:layout_toLeftOf="@id/sendImage"
+                android:background="@drawable/round_bg"
+                android:hint="Type a message"
+                android:inputType="text"
+                android:padding="18dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/sendImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_bg"
+                android:elevation="6dp"
+                android:onClick="send"
+                android:padding="12dp"
+                android:src="@drawable/ic_send"
+                android:visibility="invisible" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
 
 
 </RelativeLayout>
