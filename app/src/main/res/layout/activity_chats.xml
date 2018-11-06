@@ -68,7 +68,7 @@
                     android:background="@drawable/round_bg"
                     android:hint="Type a message"
                     android:inputType="text"
-                    android:padding="18dp"
+                    android:padding="14dp"
                     android:textColor="@color/colorBlack"
                     android:textSize="18sp" />
 
