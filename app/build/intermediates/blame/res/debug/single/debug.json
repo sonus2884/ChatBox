@@ -1,5 +1,9 @@
 [
     {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_attach_file.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_attach_file.png"
+    },
+    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_screen_simple_overlay_action_mode.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
@@ -362,6 +366,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_out_bottom.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\anim\\abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_attach_file.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_attach_file.png"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_ic_star_black_36dp.png.flat",
@@ -1020,6 +1028,14 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_camera.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\drawable\\camera.png"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\layout_custom_dialog.xml.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\layout\\custom_dialog.xml"
+    },
+    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tooltip_frame_light.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\drawable\\tooltip_frame_light.xml"
     },
@@ -1042,6 +1058,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_textfield_search_activated_mtrl_alpha.9.png.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\16c7b5f418367031a108d155345d7759\\res\\drawable-xhdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_attach_file.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_attach_file.png"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_action_bar_item_background_material.xml.flat",
@@ -1182,6 +1202,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_notification_bg.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\945d14a4fa5e4670ec96c39d8440ca17\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_attach_file.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_attach_file.png"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_abc_ic_star_black_48dp.png.flat",
@@ -1432,6 +1456,10 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\1bd482b48fcaf3493b239b49eb308433\\res\\drawable-xhdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_attach_file.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_attach_file.png"
+    },
+    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi-v4_design_ic_visibility_off.png.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\31c3476b99425ee5f1376b195d23079a\\res\\drawable-xxxhdpi-v4\\design_ic_visibility_off.png"
     },
@@ -1516,6 +1544,10 @@
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\31c3476b99425ee5f1376b195d23079a\\res\\layout\\design_navigation_item.xml"
     },
     {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dialog_bg.xml.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\drawable\\dialog_bg.xml"
+    },
+    {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_round_bg.xml.flat",
         "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\drawable\\round_bg.xml"
     },
@@ -1570,6 +1602,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_design_ic_visibility.png.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\31c3476b99425ee5f1376b195d23079a\\res\\drawable-xhdpi-v4\\design_ic_visibility.png"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_attach_file.xml.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_attach_file.xml"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\color_common_google_signin_btn_tint.xml.flat",
@@ -1674,6 +1710,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_background.xml.flat",
         "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\drawable\\background.xml"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_attach_file.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_attach_file.png"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
@@ -2250,6 +2290,10 @@
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_design_snackbar_background.xml.flat",
         "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.1.1.aar\\31c3476b99425ee5f1376b195d23079a\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
+        "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gallery.png.flat",
+        "source": "D:\\NewProjects\\ChatBox\\app\\src\\main\\res\\drawable\\gallery.png"
     },
     {
         "merged": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_account.png.flat",

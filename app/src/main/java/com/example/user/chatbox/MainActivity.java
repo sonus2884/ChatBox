@@ -17,6 +17,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -65,8 +66,9 @@ public class MainActivity extends AppCompatActivity {
         init();
         chatbutton();
 
-
     }
+
+
 
     private void chatbutton() {
 
@@ -104,12 +106,14 @@ public class MainActivity extends AppCompatActivity {
 
                     UserDetail userDetail = ds.getValue(UserDetail.class);
                     details.add(userDetail);
+
                     // Log.i("_details",details.get(0).getName());
                 }
 
                 mAdapter = new RecyclerViewAdapter(MainActivity.this, details);
                 mRecyclerView.setAdapter(mAdapter);
                 progressBar.setVisibility(View.INVISIBLE);
+
             }
 
             @Override
@@ -159,6 +163,9 @@ public class MainActivity extends AppCompatActivity {
         // camera activity...
     }
 
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -189,5 +196,8 @@ public class MainActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
+
 
 }

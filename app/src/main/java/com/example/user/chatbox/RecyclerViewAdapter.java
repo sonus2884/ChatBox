@@ -15,6 +15,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -30,6 +32,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
     private List<UserDetail> userDetails;
     public static String name1;
+
     private Animator mCurrentAnimator;
     private int mShortAnimationDuration;
 
@@ -71,7 +74,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         }
 
-        holder.imageView.setOnClickListener(new View.OnClickListener() {
+       holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                // Intent intent = new Intent(mContext,Camera2Activity.class);
@@ -103,7 +106,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView nameText;
         TextView aboutText;
         LinearLayout mLinearLayout;
-        //ImageView extendedImage;
+        ImageView expandedImageView;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -112,9 +115,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             nameText = itemView.findViewById(R.id.nameText);
             aboutText = itemView.findViewById(R.id.aboutText);
             mLinearLayout = itemView.findViewById(R.id.linear_layout);
-          //  extendedImage = itemView.findViewById(R.id.expanded_image);
+            expandedImageView = itemView.findViewById(R.id.expanded_image);
         }
     }
-
 
 }

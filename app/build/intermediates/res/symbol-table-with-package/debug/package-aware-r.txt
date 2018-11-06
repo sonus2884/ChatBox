@@ -817,6 +817,7 @@ drawable avd_show_password
 drawable background
 drawable bg_edit
 drawable border
+drawable camera
 drawable chat_bg
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
@@ -843,10 +844,13 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dialog_bg
+drawable gallery
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
 drawable ic_action_camera
+drawable ic_attach_file
 drawable ic_camera_alt
 drawable ic_chat_black
 drawable ic_edit
@@ -920,6 +924,7 @@ id beginning
 id blocking
 id bottom
 id buttonPanel
+id cameraLayout
 id cameraView
 id cancel_action
 id cardView
@@ -968,6 +973,7 @@ id fill_vertical
 id fixed
 id forever
 id frameLayout
+id galleryLayout
 id ghost_view
 id gone
 id groups
@@ -1164,6 +1170,7 @@ layout activity_main
 layout activity_profile
 layout activity_sign_up
 layout activity_status
+layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

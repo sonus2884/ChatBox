@@ -186,7 +186,7 @@ ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:9-53
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:19-50
 activity#com.example.user.chatbox.AboutUsActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:9-62
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:9-53
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:19-50
 uses-sdk

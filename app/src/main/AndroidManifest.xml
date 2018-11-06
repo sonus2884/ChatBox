@@ -27,7 +27,7 @@
         <activity android:name=".Camera2Activity" />
         <activity android:name=".ChatsActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".AboutUsActivity"></activity>
+        <activity android:name=".AboutUsActivity" />
     </application>
 
 </manifest>

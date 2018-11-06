@@ -1,16 +1,27 @@
 package com.example.user.chatbox;
 
+import android.Manifest;
+import android.app.Dialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.DialogTitle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -157,12 +168,6 @@ public class ChatsActivity extends AppCompatActivity {
                     String message = map.get("message").toString();
                     String user = map.get("user").toString();
 
-                  //  SendReceiveMsg msg = ds.getValue(SendReceiveMsg.class);
-
-                   // sendReceiveMessage.add(msg);
-
-                   // Log.i("_id",sendReceiveMessage.get(0).getId());
-
 
                     if (user.equals(MainActivity.name)) {
 
@@ -200,32 +205,21 @@ public class ChatsActivity extends AppCompatActivity {
 
     }
 
-  /*  public void addMessageBox(String message, int type) {
-        TextView textView = new TextView(ChatsActivity.this);
-        textView.setText(message);
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
+    public void attachedFile(View view) {
 
-
-        if (type == 1) {
-            lp.setMargins(0, 8, 8, 8);
-            lp.gravity = Gravity.END;
-
-            textView.setLayoutParams(lp);
-            textView.setTextSize(18f);
-            textView.setBackgroundResource(R.drawable.send_bg);
-        } else {
-            lp.setMargins(8, 8, 0, 8);
-            lp.gravity = Gravity.START;
-
-            textView.setLayoutParams(lp);
-            textView.setTextSize(18f);
-            textView.setBackgroundResource(R.drawable.receive_bg);
-        }
-
-        layout.addView(textView);
-        scrollView.fullScroll(View.FOCUS_DOWN);
+        Dialog dialog = new Dialog(this);
+        dialog.setContentView(R.layout.custom_dialog);
+        dialog.show();
     }
-    */
 
+    public void cameraOpen(View view) {
+
+        Toast.makeText(this, "Camera", Toast.LENGTH_SHORT).show();
+    }
+
+    public void galleryOpen(View view) {
+
+
+        Toast.makeText(this, "Gallery", Toast.LENGTH_SHORT).show();
+    }
 }

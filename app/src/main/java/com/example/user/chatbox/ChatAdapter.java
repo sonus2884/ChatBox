@@ -108,6 +108,7 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
     }
 
     void bind(SendReceiveMsg message) {
+
         sendText.setText(message.getMessage());
 
         // Format the stored timestamp into a readable String using method.
