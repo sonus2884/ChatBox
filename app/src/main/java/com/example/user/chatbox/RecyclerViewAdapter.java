@@ -1,25 +1,14 @@
 package com.example.user.chatbox;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Point;
-import android.graphics.Rect;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,10 +21,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private Context mContext;
     private List<UserDetail> userDetails;
     public static String name1;
-
-    private Animator mCurrentAnimator;
-    private int mShortAnimationDuration;
-
+    public static String imageSrc;
 
 
     public RecyclerViewAdapter(Context context, List<UserDetail> details) {
@@ -58,7 +44,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull final MyViewHolder holder, int position) {
 
         final UserDetail detail = userDetails.get(position);
-       // Log.i("_d", "Hello");
+        // Log.i("_d", "Hello");
         holder.nameText.setText(detail.getName());
 
         if (!detail.getAbout().equals(""))
@@ -74,12 +60,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         }
 
-       holder.imageView.setOnClickListener(new View.OnClickListener() {
+        holder.imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // Intent intent = new Intent(mContext,Camera2Activity.class);
-               // mContext.startActivity(intent);
-                Toast.makeText(mContext, detail.getName()+"'s Image", Toast.LENGTH_SHORT).show();
+
+                Toast.makeText(mContext, detail.getName() + "'s Image", Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -89,8 +74,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 Toast.makeText(mContext, detail.getName(), Toast.LENGTH_SHORT).show();
                 name1 = detail.getName();
-                Intent intent = new Intent(mContext,ChatsActivity.class);
+
+                imageSrc = detail.getImageUri();
+
+                Intent intent = new Intent(mContext, ChatsActivity.class);
                 mContext.startActivity(intent);
+
+
             }
         });
     }
@@ -105,7 +95,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         ImageView imageView;
         TextView nameText;
         TextView aboutText;
-        LinearLayout mLinearLayout;
+        RelativeLayout mLinearLayout;
         ImageView expandedImageView;
 
         public MyViewHolder(View itemView) {

@@ -4,15 +4,17 @@ public class SendReceiveMsg {
 
     private String message;
     private int user;
+   private String msgTime;
 
     public SendReceiveMsg(){
 
     }
 
-    public SendReceiveMsg(String msg,int id){
+    public SendReceiveMsg(String msg,int id,String msgTime){
 
         this.message = msg;
         this.user = id;
+        this.msgTime = msgTime;
     }
 
     public void setId(int id) {
@@ -29,5 +31,13 @@ public class SendReceiveMsg {
 
     public String getMessage() {
         return message;
+    }
+
+    public void setMsgTime(String msgTime) {
+        this.msgTime = msgTime;
+    }
+
+    public String getMsgTime() {
+        return msgTime;
     }
 }

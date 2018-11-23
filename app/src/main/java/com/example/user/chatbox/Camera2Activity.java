@@ -143,7 +143,7 @@ public class Camera2Activity extends AppCompatActivity {
                             UserDetail userDetail = new UserDetail();
                             String imageUri = taskSnapshot.getDownloadUrl().toString();
                             userDetail.setImageUri(imageUri);
-                            userDetail.setName(MainActivity.name);
+                            userDetail.setName(ChatFragment.name);
                             userDetail.setAbout("");
                             // String uploadId = mDatabaseRef.getKey();
 

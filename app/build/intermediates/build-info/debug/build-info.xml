@@ -5,31 +5,35 @@
     build-mode="COLD"
     density="xxhdpi"
     format="10"
+    ir-eligibility="CLASS_ADDED"
     plugin-version="3.2.1"
-    timestamp="1541479388983"
+    timestamp="1542982491186"
     token="-3787057203046464193"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="21073" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1470" />
     <task
         name="verifier"
-        duration="0" />
+        duration="125" />
 
+    <artifact
+        location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+        type="SPLIT" />
     <artifact
         location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
         type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1541478695630"
+        timestamp="1542980045769"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
@@ -70,8 +74,12 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1541479388983"
+        ir-eligibility="CLASS_ADDED"
+        timestamp="1542982491186"
         verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="D:\NewProjects\ChatBox\app\build\intermediates\split-apk\debug\slices\slice_1.apk"
+            type="SPLIT" />
         <artifact
             location="D:\NewProjects\ChatBox\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
             type="SPLIT_MAIN" />

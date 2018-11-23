@@ -20,7 +20,7 @@ public class ChatAdapter extends RecyclerView.Adapter {
     private RecyclerView.ViewHolder holder;
     private int position;
 
-     ChatAdapter(Context context, List<SendReceiveMsg> message) {
+    ChatAdapter(Context context, List<SendReceiveMsg> message) {
 
         this.mContext = context;
         this.message = message;
@@ -96,13 +96,15 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
 class SendMessageHolder extends RecyclerView.ViewHolder {
 
-    TextView sendText;
+    private TextView sendText;
+    private TextView sendMsgTime;
 
 
     SendMessageHolder(View itemView) {
         super(itemView);
 
         sendText = itemView.findViewById(R.id.sendText);
+        sendMsgTime = itemView.findViewById(R.id.sendMsgTime);
 
 
     }
@@ -110,6 +112,7 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
     void bind(SendReceiveMsg message) {
 
         sendText.setText(message.getMessage());
+        sendMsgTime.setText(message.getMsgTime());
 
         // Format the stored timestamp into a readable String using method.
         // timeText.setText(Utils.formatDateTime(message.getCreatedAt()));
@@ -118,18 +121,21 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
 
 class ReceiveMessageHolder extends RecyclerView.ViewHolder {
 
-    TextView receiveText;
+    private TextView receiveText;
+    private TextView receiveMsgTime;
 
     ReceiveMessageHolder(View itemView) {
         super(itemView);
 
         receiveText = itemView.findViewById(R.id.receiveText);
+        receiveMsgTime = itemView.findViewById(R.id.receiveMsgTime);
     }
 
 
     void bind(SendReceiveMsg message) {
 
         receiveText.setText(message.getMessage());
+        receiveMsgTime.setText(message.getMsgTime());
     }
 
 }

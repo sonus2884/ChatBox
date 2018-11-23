@@ -1,40 +1,34 @@
 package com.example.user.chatbox;
 
-import android.Manifest;
-import android.app.Dialog;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
+import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.DialogTitle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.GenericTypeIndicator;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.picasso.Picasso;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
-import java.util.Map;
+import java.util.Locale;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChatsActivity extends AppCompatActivity {
 
@@ -49,11 +43,8 @@ public class ChatsActivity extends AppCompatActivity {
     private List<SendReceiveMsg> sendReceiveMessage;
     private SendReceiveMsg sendReceiveMsg;
     private ChatAdapter mAdapter;
-
-   // private Map map;
-    private GenericTypeIndicator<Map<String, String>> genericTypeIndicator;
-    // private LinearLayout layout;
-    // private ScrollView scrollView;
+    private TextView titleText;
+    private CircleImageView chatProfImage;
 
 
     @Override
@@ -61,26 +52,16 @@ public class ChatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chats);
 
-        // layout = findViewById(R.id.layout1);
-        // scrollView = findViewById(R.id.scrollView);
+
         messageText = findViewById(R.id.messageText);
         recyclerView = findViewById(R.id.recyclerView);
         sendButton = findViewById(R.id.sendImage);
+        chatProfImage = findViewById(R.id.titleProfImage);
+        titleText = findViewById(R.id.titleText);
+        titleText.setText(RecyclerViewAdapter.name1);
+
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        setTitle(RecyclerViewAdapter.name1);
 
-        toolbar.setNavigationIcon(android.support.v7.appcompat.R.drawable.abc_ic_ab_back_material);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
-       // map = new HashMap();
-        genericTypeIndicator = new GenericTypeIndicator<Map<String, String>>() {
-        };
 
         recyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -90,15 +71,30 @@ public class ChatsActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         mReferenceSend = FirebaseDatabase.getInstance().getReference("Messages")
-                .child(MainActivity.name + "_" + RecyclerViewAdapter.name1);
+                .child(ChatFragment.name + "_" + RecyclerViewAdapter.name1);
 
         mReferenceReceive = FirebaseDatabase.getInstance().getReference("Messages")
-                .child(RecyclerViewAdapter.name1 + "_" + MainActivity.name);
+                .child(RecyclerViewAdapter.name1 + "_" + ChatFragment.name);
 
+
+        if (!RecyclerViewAdapter.imageSrc.equals("")) {
+
+            Picasso.with(ChatsActivity.this)
+                    .load(RecyclerViewAdapter.imageSrc)
+                    .placeholder(R.drawable.ic_account)
+                    .fit()
+                    .into(chatProfImage);
+        }
 
 
         retrieveMsg();
         init();
+
+    }
+
+    public void arrowBack(View view) {
+
+        onBackPressed();
 
     }
 
@@ -137,12 +133,24 @@ public class ChatsActivity extends AppCompatActivity {
     public void send(View view) {
         String msg = messageText.getText().toString().trim();
 
-        Map<String, String> map = new HashMap<>();
-        map.put("message", msg);
-        map.put("user", MainActivity.name);
+        Date currentTime = Calendar.getInstance().getTime();
+        Date dt = new Date(String.valueOf(currentTime));
+        SimpleDateFormat sdf = new SimpleDateFormat("hh:mm aa", Locale.US);
+        String msgTime = sdf.format(dt);
 
-        mReferenceSend.push().setValue(map);
-        mReferenceReceive.push().setValue(map);
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
+        String msgDate = dateFormat.format(new Date());
+
+        ChatsMsg chatsMsg = new ChatsMsg();
+
+        chatsMsg.setMessage(msg);
+        chatsMsg.setUser(ChatFragment.name);
+        chatsMsg.setMsgTime(msgTime);
+        chatsMsg.setMsgDate(msgDate);
+
+        mReferenceSend.push().setValue(chatsMsg);
+        mReferenceReceive.push().setValue(chatsMsg);
+
         messageText.setText("");
 
         retrieveMsg();
@@ -163,22 +171,24 @@ public class ChatsActivity extends AppCompatActivity {
 
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
-                   Map map = ds.getValue(genericTypeIndicator);
+                    ChatsMsg chatsMsg = ds.getValue(ChatsMsg.class);
 
-                    String message = map.get("message").toString();
-                    String user = map.get("user").toString();
+                    String message = chatsMsg.getMessage();
+                    String user = chatsMsg.getUser();
 
+                    String msgTime = chatsMsg.getMsgTime();
+                    Log.i("_Time", msgTime);
 
-                    if (user.equals(MainActivity.name)) {
+                    if (user.equals(ChatFragment.name)) {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 1);
+                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 1);
 
 
-                    } else{
+                    } else {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 2);
+                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 2);
                     }
@@ -189,9 +199,6 @@ public class ChatsActivity extends AppCompatActivity {
                 mAdapter = new ChatAdapter(ChatsActivity.this, sendReceiveMessage);
                 recyclerView.setAdapter(mAdapter);
                 recyclerView.smoothScrollToPosition(mAdapter.getItemCount());
-
-
-
 
 
             }
@@ -207,19 +214,11 @@ public class ChatsActivity extends AppCompatActivity {
 
     public void attachedFile(View view) {
 
-        Dialog dialog = new Dialog(this);
-        dialog.setContentView(R.layout.custom_dialog);
-        dialog.show();
+         BottomSheetFragment mBottomSheetFragment = new BottomSheetFragment();
+        mBottomSheetFragment.show(getSupportFragmentManager(),mBottomSheetFragment.getTag());
+
+
     }
 
-    public void cameraOpen(View view) {
 
-        Toast.makeText(this, "Camera", Toast.LENGTH_SHORT).show();
-    }
-
-    public void galleryOpen(View view) {
-
-
-        Toast.makeText(this, "Gallery", Toast.LENGTH_SHORT).show();
-    }
 }

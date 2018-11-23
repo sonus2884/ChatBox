@@ -46,7 +46,7 @@ public class ProfileActivity extends AppCompatActivity {
         profileImage = findViewById(R.id.profile_image);
         nameText = findViewById(R.id.nameText);
 
-        nameText.setText(MainActivity.name);
+        nameText.setText(ChatFragment.name);
 
         mAuth = FirebaseAuth.getInstance();
         mReference = FirebaseDatabase.getInstance().getReference("User details");

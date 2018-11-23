@@ -568,6 +568,8 @@ color switch_thumb_material_dark
 color switch_thumb_material_light
 color switch_thumb_normal_material_dark
 color switch_thumb_normal_material_light
+color tabIndicatorColor
+color tabTextColor
 color tooltip_background_dark
 color tooltip_background_light
 dimen abc_action_bar_content_inset_material
@@ -850,6 +852,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
 drawable ic_action_camera
+drawable ic_arrow_back
 drawable ic_attach_file
 drawable ic_camera_alt
 drawable ic_chat_black
@@ -873,9 +876,9 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable receive_bg
+drawable receive_bgs
 drawable round_bg
-drawable send_bg
+drawable send_bgs
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 id ALT
@@ -941,9 +944,11 @@ id collapseActionView
 id container
 id contentPanel
 id coordinator
+id coordinatorLayout
 id custom
 id customPanel
 id dark
+id dateTimeText
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -984,7 +989,6 @@ id icon_group
 id icon_only
 id ifRoom
 id image
-id include
 id info
 id invisible
 id italic
@@ -1033,6 +1037,7 @@ id progress_horizontal
 id radio
 id rePasswordText
 id rePasswordTextWrapper
+id receiveMsgTime
 id receiveText
 id recyclerView
 id relativeLayout
@@ -1061,6 +1066,7 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id sendImage
+id sendMsgTime
 id sendText
 id setting
 id shortcut
@@ -1088,6 +1094,7 @@ id statusText
 id status_bar_latest_event_content
 id submenuarrow
 id submit_area
+id tabLayout
 id tabMode
 id tag_transition_group
 id text
@@ -1100,7 +1107,10 @@ id textinput_error
 id time
 id title
 id titleDividerNoCustom
+id titleProfImage
+id titleText
 id title_template
+id token
 id toolbar
 id top
 id topPanel
@@ -1116,6 +1126,7 @@ id uploadButton
 id useLogo
 id view
 id view_offset_helper
+id viewpager
 id visibilityOff
 id visibilityOn
 id visible
@@ -1170,7 +1181,10 @@ layout activity_main
 layout activity_profile
 layout activity_sign_up
 layout activity_status
-layout custom_dialog
+layout bottom_sheet
+layout call_fagement
+layout camera_fragement
+layout chat_fragement
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
