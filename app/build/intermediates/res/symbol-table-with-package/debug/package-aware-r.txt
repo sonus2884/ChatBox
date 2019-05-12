@@ -501,6 +501,7 @@ color colorGray
 color colorLightW
 color colorPrimary
 color colorPrimaryDark
+color colorRed
 color colorWhite
 color common_google_signin_btn_text_dark
 color common_google_signin_btn_text_dark_default
@@ -533,6 +534,7 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color lightGray
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
@@ -818,7 +820,6 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable background
 drawable bg_edit
-drawable border
 drawable camera
 drawable chat_bg
 drawable common_full_open_on_phone
@@ -840,19 +841,20 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable custom_buttom
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
-drawable dialog_bg
 drawable gallery
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_account
 drawable ic_action_camera
 drawable ic_arrow_back
+drawable ic_arrow_back_black_24dp
 drawable ic_attach_file
 drawable ic_camera_alt
 drawable ic_chat_black
@@ -888,7 +890,6 @@ id META
 id SHIFT
 id SYM
 id about
-id aboutText
 id aboutTextImage
 id aboutUs
 id action0
@@ -948,7 +949,6 @@ id coordinatorLayout
 id custom
 id customPanel
 id dark
-id dateTimeText
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -970,14 +970,12 @@ id enterAlways
 id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
-id expanded_image
 id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
 id fixed
 id forever
-id frameLayout
 id galleryLayout
 id ghost_view
 id gone
@@ -989,11 +987,14 @@ id icon_group
 id icon_only
 id ifRoom
 id image
+id img_off
+id img_on
 id info
 id invisible
 id italic
 id item_touch_helper_previous_elevation
 id largeLabel
+id last_msg
 id left
 id light
 id line1
@@ -1009,6 +1010,7 @@ id message
 id messageText
 id middle
 id mini
+id msg_dateText
 id multiply
 id nameText
 id nameText1
@@ -1034,6 +1036,7 @@ id profile_image
 id profile_image_edit
 id progress_circular
 id progress_horizontal
+id r1
 id radio
 id rePasswordText
 id rePasswordTextWrapper
@@ -1102,6 +1105,7 @@ id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
 id text_input_password_toggle
+id text_seen
 id textinput_counter
 id textinput_error
 id time
@@ -1281,6 +1285,7 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string default_web_client_id
+string fcm_fallback_notification_channel_label
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key

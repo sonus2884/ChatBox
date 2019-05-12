@@ -30,21 +30,21 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.user.chatbox.MainActivity" />
-        <activity android:name="com.example.user.chatbox.StatusActivity" />
-        <activity android:name="com.example.user.chatbox.CameraActivity" />
-        <activity android:name="com.example.user.chatbox.LoginActivity" >
+        <activity android:name="com.example.user.chatbox.Activity.MainActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.StatusActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.CameraActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.user.chatbox.SignUpActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.SignUpActivity" />
         <activity android:name="com.example.user.chatbox.Camera2Activity" />
-        <activity android:name="com.example.user.chatbox.ChatsActivity" />
-        <activity android:name="com.example.user.chatbox.ProfileActivity" />
-        <activity android:name="com.example.user.chatbox.AboutUsActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.ChatsActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.ProfileActivity" />
+        <activity android:name="com.example.user.chatbox.Activity.AboutUsActivity" />
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"

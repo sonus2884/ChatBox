@@ -13,21 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".StatusActivity" />
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.StatusActivity" />
+        <activity android:name=".Activity.CameraActivity" />
+        <activity android:name=".Activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity" />
+        <activity android:name=".Activity.SignUpActivity" />
         <activity android:name=".Camera2Activity" />
-        <activity android:name=".ChatsActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".Activity.ChatsActivity" />
+        <activity android:name=".Activity.ProfileActivity" />
+        <activity android:name=".Activity.AboutUsActivity" />
     </application>
 
 </manifest>

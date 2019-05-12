@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorGray"
-    tools:context=".ProfileActivity">
+    tools:context=".Activity.ProfileActivity">
 
 
     <android.support.design.widget.AppBarLayout
@@ -15,13 +15,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:background="#4CAF50"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
+            android:layout_height="wrap_content"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         </android.support.v7.widget.Toolbar>
@@ -41,6 +40,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp">
 
+
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
             android:layout_width="match_parent"
@@ -56,7 +56,7 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            app:cardBackgroundColor="#4CAF50"
+            app:cardBackgroundColor="@color/colorPrimary"
             app:cardCornerRadius="24dp"
             app:cardElevation="4dp">
 
@@ -120,7 +120,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
             android:text="Currently set to"
-            android:textColor="#4CAF50"
+            android:textColor="@color/colorBlack"
             android:textSize="20sp" />
 
         <View
