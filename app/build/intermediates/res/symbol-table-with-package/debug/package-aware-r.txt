@@ -1034,6 +1034,7 @@ id pin
 id profileImageView
 id profile_image
 id profile_image_edit
+id progress_bar
 id progress_circular
 id progress_horizontal
 id r1
@@ -1312,6 +1313,7 @@ style Animation_Design_BottomSheetDialog
 style AppTheme
 style AppTheme_AppBarOverlay
 style AppTheme_PopupOverlay
+style AppTheme_WhiteAccent
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog

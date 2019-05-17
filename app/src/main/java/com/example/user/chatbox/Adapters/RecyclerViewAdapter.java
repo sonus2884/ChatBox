@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,6 +30,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public static String name1;
     public static String imageSrc;
+    public static String receiverUid;
     private String theLastMessage;
     private String theLastMsgDate;
     private Context mContext;
@@ -85,6 +85,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             public void onClick(View v) {
                 // Toast.makeText(mContext, detail.getName(), Toast.LENGTH_SHORT).show();
                 name1 = detail.getName();
+                receiverUid = detail.getReceiverUid();
 
                 imageSrc = detail.getImageUri();
 
@@ -96,7 +97,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         });
 
         if (isOnline) {
-            LastMessage(detail.getName(), holder.last_msg,holder.msg_last_date);
+            LastMessage(detail.getName(), holder.last_msg, holder.msg_last_date);
         }
 
         if (isOnline) {
@@ -134,7 +135,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                 UserDetail detail = dataSnapshot.getValue(UserDetail.class);
                 userName[0] = detail.getName();
-              //  Log.i("_ku", userName[0] + "_" + userId);
+                //  Log.i("_ku", userName[0] + "_" + userId);
 
                 DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Messages")
                         .child(userName[0] + "_" + userId);
@@ -146,10 +147,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                         for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                             ChatsMsg chat = ds.getValue(ChatsMsg.class);
-                            Log.i("_key", chat.getMessage());
+                            //Log.i("_key", chat.getMessage());
 
-                                theLastMessage = chat.getMessage();
-                                theLastMsgDate = chat.getMsgDate();
+                            theLastMessage = chat.getMessage();
+                            theLastMsgDate = chat.getMsgDate();
                         }
 
                         switch (theLastMessage) {

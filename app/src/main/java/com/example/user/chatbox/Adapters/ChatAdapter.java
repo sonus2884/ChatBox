@@ -9,7 +9,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.user.chatbox.Class.SendReceiveMsg;
+import com.example.user.chatbox.Notification.Token;
 import com.example.user.chatbox.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -114,17 +119,17 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
 
     }
 
-    void bind(SendReceiveMsg message,int p, int m) {
+    void bind(SendReceiveMsg message, int p, int m) {
 
         sendText.setText(message.getMessage());
         sendMsgTime.setText(message.getMsgTime());
-        if (p==m){
-            if (message.isSeenMsg()){
+        if (p == m) {
+            if (message.isSeenMsg()) {
                 seen_msg.setText("seen");
-            }else {
+            } else {
                 seen_msg.setText("deliver");
             }
-        }else {
+        } else {
             seen_msg.setVisibility(View.GONE);
         }
 
@@ -151,6 +156,8 @@ class ReceiveMessageHolder extends RecyclerView.ViewHolder {
         receiveMsgTime.setText(message.getMsgTime());
 
     }
+
+
 
 }
 

@@ -1,30 +1,37 @@
 package com.example.user.chatbox.Activity;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.user.chatbox.Adapters.ChatAdapter;
 import com.example.user.chatbox.Adapters.RecyclerViewAdapter;
 import com.example.user.chatbox.Class.ChatsMsg;
 import com.example.user.chatbox.Class.SendReceiveMsg;
+import com.example.user.chatbox.Class.UserDetail;
+import com.example.user.chatbox.Fragments.APIServices;
 import com.example.user.chatbox.Fragments.BottomSheetFragment;
 import com.example.user.chatbox.Fragments.ChatFragment;
+import com.example.user.chatbox.Notification.Client;
+import com.example.user.chatbox.Notification.Data;
+import com.example.user.chatbox.Notification.MyResponse;
+import com.example.user.chatbox.Notification.Sender;
+import com.example.user.chatbox.Notification.Token;
 import com.example.user.chatbox.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
@@ -37,6 +44,9 @@ import java.util.List;
 import java.util.Locale;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ChatsActivity extends AppCompatActivity {
 
@@ -56,6 +66,9 @@ public class ChatsActivity extends AppCompatActivity {
     private CircleImageView chatProfImage;
     private ValueEventListener seenListener;
 
+    private APIServices apiServices;
+    private boolean notify = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +85,7 @@ public class ChatsActivity extends AppCompatActivity {
 
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
 
+        apiServices = Client.getClient("https://fcm.googleapis.com/").create(APIServices.class);
 
         recyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -101,6 +115,7 @@ public class ChatsActivity extends AppCompatActivity {
         init();
 
     }
+
 
     public void arrowBack(View view) {
 
@@ -143,9 +158,10 @@ public class ChatsActivity extends AppCompatActivity {
 
     // Seen Message..
     private void seenMessage() {
+        notify = true;
 
-        mSeenRef  = FirebaseDatabase.getInstance().getReference("Messages")
-                .child(RecyclerViewAdapter.name1+ "_" + ChatFragment.name);
+        mSeenRef = FirebaseDatabase.getInstance().getReference("Messages")
+                .child(RecyclerViewAdapter.name1 + "_" + ChatFragment.name);
 
         seenListener = mSeenRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -156,7 +172,7 @@ public class ChatsActivity extends AppCompatActivity {
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("isSeenMsg", true);
                     mSeenRef.child(ds.getKey()).updateChildren(hashMap);
-                   // Toast.makeText(ChatsActivity.this, "True", Toast.LENGTH_SHORT).show();
+                    // Toast.makeText(ChatsActivity.this, "True", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -194,8 +210,75 @@ public class ChatsActivity extends AppCompatActivity {
 
         retrieveMsg();
 
+        //Notification Sending..
+
+        final String message = msg;
+        DatabaseReference mReference = FirebaseDatabase.getInstance().getReference().child("User details")
+                .child(mAuth.getUid());
+        mReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+
+                UserDetail userDetail = dataSnapshot.getValue(UserDetail.class);
+                //Log.i("_nn",userDetail.getName());
+                if (notify) {
+                   // sendNotification(userDetail.getName(), message);
+                }
+                notify = false;
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
+
     }
 
+    // Notification sending
+    private void sendNotification(final String userName, final String message) {
+
+        DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
+        Query query = tokens.orderByKey().equalTo(RecyclerViewAdapter.receiverUid);
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+                    Token token = ds.getValue(Token.class);
+                    Data data = new Data(mAuth.getUid(), "" + R.mipmap.ic_launcher, userName + ": " + message,
+                            "New Message", RecyclerViewAdapter.receiverUid);
+
+                    Sender sender = new Sender(data, token.getToken());
+                    apiServices.sendNotification(sender)
+                            .enqueue(new Callback<MyResponse>() {
+                                @Override
+                                public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
+                                    if (response.code() == 200) {
+//                                        if (response.body().success != 1){
+//                                            Toast.makeText(ChatsActivity.this, "Failed Notification",
+//                                                    Toast.LENGTH_SHORT).show();
+//                                        }
+                                    }
+                                }
+
+                                @Override
+                                public void onFailure(Call<MyResponse> call, Throwable t) {
+
+                                }
+                            });
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     private void retrieveMsg() {
 
@@ -217,18 +300,18 @@ public class ChatsActivity extends AppCompatActivity {
 
                     String msgTime = chatsMsg.getMsgTime();
                     boolean isMessageSeen = chatsMsg.getIsSeenMsg();
-                    Log.i("_isSeen", isMessageSeen+"");
+                    //  Log.i("_isSeen", isMessageSeen + "");
 
                     if (user.equals(ChatFragment.name)) {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime,isMessageSeen);
+                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 1);
 
 
                     } else {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime,isMessageSeen);
+                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 2);
                     }

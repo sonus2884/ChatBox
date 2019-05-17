@@ -40,6 +40,15 @@
         android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp">
 
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:padding="4dp"
+            android:theme="@style/AppTheme.WhiteAccent" />
+
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"

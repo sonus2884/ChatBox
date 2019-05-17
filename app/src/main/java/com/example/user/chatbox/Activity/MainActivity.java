@@ -106,12 +106,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         onOffLine("offline");
     }
-//
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        onOffLine("offline");
-//    }
+
 
 
 }

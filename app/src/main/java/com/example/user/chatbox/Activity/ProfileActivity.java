@@ -1,15 +1,18 @@
 package com.example.user.chatbox.Activity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.chatbox.Camera2Activity;
+import com.example.user.chatbox.Class.UserDetail;
 import com.example.user.chatbox.Fragments.ChatFragment;
 import com.example.user.chatbox.R;
-import com.example.user.chatbox.Class.UserDetail;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -27,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
     private TextView nameText;
     private DatabaseReference mReference;
     private FirebaseAuth mAuth;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +53,17 @@ public class ProfileActivity extends AppCompatActivity {
         aboutUs = findViewById(R.id.about);
         profileImage = findViewById(R.id.profile_image);
         nameText = findViewById(R.id.nameText);
+        progressBar = findViewById(R.id.progress_bar);
 
         nameText.setText(ChatFragment.name);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null) {
+            String imageUri = bundle.getString("imageUri");
+            Uri mUri = Uri.parse(imageUri);
+            Toast.makeText(this, "imageUri", Toast.LENGTH_SHORT).show();
+            profileImage.setImageURI(mUri);
+        }
+
 
         mAuth = FirebaseAuth.getInstance();
         mReference = FirebaseDatabase.getInstance().getReference("User details");
@@ -59,8 +72,9 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
+                progressBar.setVisibility(View.VISIBLE);
 
-                for (DataSnapshot ds : dataSnapshot.getChildren()){
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                     if (ds.getKey().equals(mAuth.getUid())) {
 
@@ -68,7 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
 
 
                         if (!dt.getImageUri().equals("")) {
-
+                            progressBar.setVisibility(View.INVISIBLE);
                             Picasso.with(ProfileActivity.this)
                                     .load(dt.getImageUri())
                                     .placeholder(R.drawable.ic_account)
@@ -87,6 +101,8 @@ public class ProfileActivity extends AppCompatActivity {
             @Override
             public void onCancelled(DatabaseError databaseError) {
 
+                progressBar.setVisibility(View.INVISIBLE);
+                Toast.makeText(ProfileActivity.this, "Sorry! Try Again !", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -161,6 +161,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             userDetail.setName(name);
                             userDetail.setAbout("");
                             userDetail.setImageUri("");
+                            userDetail.setReceiverUid(mAuth.getUid());
                             mDatabaseRef.setValue(userDetail);
 
                             Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);

@@ -5,6 +5,7 @@ public class UserDetail {
     private String about;
     private String imageUri;
     private String onOffLine;
+    private String receiverUid;
 
 
     public UserDetail() {
@@ -55,5 +56,13 @@ public class UserDetail {
 
     public void setOnOffLine(String onOffLine) {
         this.onOffLine = onOffLine;
+    }
+
+    public String getReceiverUid() {
+        return receiverUid;
+    }
+
+    public void setReceiverUid(String receiverUid) {
+        this.receiverUid = receiverUid;
     }
 }
