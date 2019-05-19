@@ -4,39 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#efefef"
     tools:context=".Activity.AboutUsActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-        </android.support.v7.widget.Toolbar>
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
 
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/appbar"
-        android:layout_marginTop="16dp">
+        android:layout_below="@id/appBar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="8dp"
+        android:orientation="vertical">
 
 
-        <EditText
-            android:id="@+id/editAbout"
+        <TextView
+            android:id="@+id/textAbout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="About" />
-    </RelativeLayout>
+            android:hint="About"
+            android:onClick="editAboutUs"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorLightW" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/aboutRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
 
 </RelativeLayout>

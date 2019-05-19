@@ -848,6 +848,7 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dialog_bg
 drawable gallery
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
@@ -890,6 +891,7 @@ id META
 id SHIFT
 id SYM
 id about
+id aboutRecyclerView
 id aboutTextImage
 id aboutUs
 id action0
@@ -930,6 +932,7 @@ id bottom
 id buttonPanel
 id cameraLayout
 id cameraView
+id cancelButton
 id cancel_action
 id cardView
 id center
@@ -956,11 +959,12 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialog_title
 id dimensions
 id direct
 id disableHome
-id editAbout
 id editNameImage
+id edit_about
 id edit_query
 id emailText
 id emailTextWrapper
@@ -1049,6 +1053,7 @@ id relativeLayout1
 id right
 id right_icon
 id right_side
+id saveButton
 id save_image_matrix
 id save_non_transition_alpha
 id save_scale_type
@@ -1103,6 +1108,7 @@ id tabMode
 id tag_transition_group
 id text
 id text2
+id textAbout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id text_input_password_toggle
@@ -1177,6 +1183,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout about_dialog_box
 layout activity_about_us
 layout activity_camera
 layout activity_camera2
