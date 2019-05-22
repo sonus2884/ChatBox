@@ -14,3 +14,7 @@
 # Prifile Activity
 ![image](https://user-images.githubusercontent.com/23735926/50736113-13dadb00-11df-11e9-91c2-efbd5a934303.png)
 
+# About Us
+![image](https://user-images.githubusercontent.com/23735926/58173728-bb9e0480-7cb9-11e9-97b0-c827f1fe22d3.png)
+
+
