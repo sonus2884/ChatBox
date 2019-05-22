@@ -7,6 +7,7 @@ public class ChatsMsg {
     private String msgDate;
     private String msgTime;
     private boolean isSeenMsg;
+    private boolean isTyping;
 
 
     public ChatsMsg() {
@@ -67,5 +68,13 @@ public class ChatsMsg {
 
     public void setIsSeenMsg(boolean isSeenMsg) {
         this.isSeenMsg = isSeenMsg;
+    }
+
+    public boolean isTyping() {
+        return isTyping;
+    }
+
+    public void setTyping(boolean typing) {
+        isTyping = typing;
     }
 }

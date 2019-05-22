@@ -952,6 +952,7 @@ id coordinatorLayout
 id custom
 id customPanel
 id dark
+id date_tv
 id decor_content_parent
 id default_activity_button
 id design_bottom_sheet
@@ -984,6 +985,7 @@ id galleryLayout
 id ghost_view
 id gone
 id groups
+id header
 id home
 id homeAsUp
 id icon

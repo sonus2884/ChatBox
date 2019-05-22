@@ -6,15 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.user.chatbox.Class.SendReceiveMsg;
-import com.example.user.chatbox.Notification.Token;
 import com.example.user.chatbox.R;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 
@@ -22,14 +18,12 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
     private static final int VIEW_TYPE_MESSAGE_SENT = 1;
     private static final int VIEW_TYPE_MESSAGE_RECEIVED = 2;
-    private Context mContext;
+    private static final int VIEW_TYPE_MESSAGE_HEADER = 3;
     private List<SendReceiveMsg> message;
-    private RecyclerView.ViewHolder holder;
-    private int position;
 
     public ChatAdapter(Context context, List<SendReceiveMsg> message) {
 
-        this.mContext = context;
+        Context mContext = context;
         this.message = message;
 
     }
@@ -59,27 +53,22 @@ public class ChatAdapter extends RecyclerView.Adapter {
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        this.holder = holder;
-        this.position = position;
-
+        RecyclerView.ViewHolder holder1 = holder;
+        int position1 = position;
 
         SendReceiveMsg msg = message.get(position);
 
-
         switch (holder.getItemViewType()) {
             case VIEW_TYPE_MESSAGE_SENT:
-                ((SendMessageHolder) holder).bind(msg, position, message.size() - 1);
+                ((SendMessageHolder) holder).bind(msg, position, message);
                 break;
             case VIEW_TYPE_MESSAGE_RECEIVED:
-                ((ReceiveMessageHolder) holder).bind(msg);
+                ((ReceiveMessageHolder) holder).bind(msg, position, message);
         }
     }
-    // Log.i("_Message",msg.getMessage());
-
 
     @Override
     public int getItemCount() {
-
 
         return message.size();
     }
@@ -107,6 +96,8 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
     private TextView sendText;
     private TextView sendMsgTime;
     private TextView seen_msg;
+    private LinearLayout header;
+    private TextView date_tv;
 
 
     SendMessageHolder(View itemView) {
@@ -116,14 +107,17 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
         sendMsgTime = itemView.findViewById(R.id.sendMsgTime);
         seen_msg = itemView.findViewById(R.id.text_seen);
 
+        header = itemView.findViewById(R.id.header);
+        date_tv = itemView.findViewById(R.id.date_tv);
+
 
     }
 
-    void bind(SendReceiveMsg message, int p, int m) {
+    void bind(SendReceiveMsg message, int p, List<SendReceiveMsg> msg) {
 
         sendText.setText(message.getMessage());
         sendMsgTime.setText(message.getMsgTime());
-        if (p == m) {
+        if (p == msg.size() - 1) {
             if (message.isSeenMsg()) {
                 seen_msg.setText("seen");
             } else {
@@ -131,6 +125,17 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
             }
         } else {
             seen_msg.setVisibility(View.GONE);
+        }
+
+        date_tv.setText(message.getMsgDate());
+        if (p > 0) {
+            if (msg.get(p).getMsgDate().equalsIgnoreCase(msg.get(p - 1).getMsgDate())) {
+                header.setVisibility(View.GONE);
+            } else {
+                header.setVisibility(View.VISIBLE);
+            }
+        } else {
+            header.setVisibility(View.VISIBLE);
         }
 
 
@@ -141,23 +146,36 @@ class ReceiveMessageHolder extends RecyclerView.ViewHolder {
 
     private TextView receiveText;
     private TextView receiveMsgTime;
+    private LinearLayout header;
+    private TextView date_tv;
 
     ReceiveMessageHolder(View itemView) {
         super(itemView);
 
         receiveText = itemView.findViewById(R.id.receiveText);
         receiveMsgTime = itemView.findViewById(R.id.receiveMsgTime);
+        header = itemView.findViewById(R.id.header);
+        date_tv = itemView.findViewById(R.id.date_tv);
     }
 
 
-    void bind(SendReceiveMsg message) {
+    void bind(SendReceiveMsg message, int position, List<SendReceiveMsg> msg) {
 
         receiveText.setText(message.getMessage());
         receiveMsgTime.setText(message.getMsgTime());
-
+        date_tv.setText(message.getMsgDate());
+        if (position > 0) {
+            if (msg.get(position).getMsgDate().equalsIgnoreCase(msg.get(position - 1).getMsgDate())) {
+                header.setVisibility(View.GONE);
+            } else {
+                header.setVisibility(View.VISIBLE);
+            }
+        } else {
+            header.setVisibility(View.VISIBLE);
+        }
     }
 
-
-
 }
+
+
 

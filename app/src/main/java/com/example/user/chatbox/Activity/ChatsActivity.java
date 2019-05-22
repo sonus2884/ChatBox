@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -56,6 +58,8 @@ public class ChatsActivity extends AppCompatActivity {
     private DatabaseReference mReferenceSend;
     private DatabaseReference mReferenceReceive;
     private DatabaseReference mSeenRef;
+    private DatabaseReference mTypingRef;
+
 
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -65,6 +69,9 @@ public class ChatsActivity extends AppCompatActivity {
     private TextView titleText;
     private CircleImageView chatProfImage;
     private ValueEventListener seenListener;
+
+    // Typing..
+    private boolean typingStart;
 
     private APIServices apiServices;
     private boolean notify = false;
@@ -114,6 +121,7 @@ public class ChatsActivity extends AppCompatActivity {
         retrieveMsg();
         init();
 
+
     }
 
 
@@ -125,6 +133,7 @@ public class ChatsActivity extends AppCompatActivity {
 
 
     private void init() {
+
 
         messageText.addTextChangedListener(new TextWatcher() {
             @Override
@@ -150,10 +159,47 @@ public class ChatsActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {
 
+                if (!TextUtils.isEmpty(s.toString()) && s.toString().trim().length() == 1) {
+
+                    typingStart = true;
+                } else if (s.toString().trim().length() == 0 && typingStart) {
+                    //Log.i("_Typing", "Typing stop.. ");
+                    typingStart = false;
+
+                }
             }
         });
 
         seenMessage();
+
+    }
+
+    // IS Typing ...
+
+    private void isTyping(final boolean typing) {
+        Log.i("_Typing", typingStart+"");
+        mTypingRef = FirebaseDatabase.getInstance().getReference("Messages")
+                .child(RecyclerViewAdapter.name1 + "_" + ChatFragment.name);
+
+        seenListener = mTypingRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot ds : dataSnapshot.getChildren()) {
+
+                    ChatsMsg chat = ds.getValue(ChatsMsg.class);
+                    HashMap<String, Object> hashMap = new HashMap<>();
+                    hashMap.put("isTyping", typing);
+                    mSeenRef.child(ds.getKey()).updateChildren(hashMap);
+                    // Toast.makeText(ChatsActivity.this, "True", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
     }
 
     // Seen Message..
@@ -223,7 +269,7 @@ public class ChatsActivity extends AppCompatActivity {
                 UserDetail userDetail = dataSnapshot.getValue(UserDetail.class);
                 //Log.i("_nn",userDetail.getName());
                 if (notify) {
-                   // sendNotification(userDetail.getName(), message);
+                    // sendNotification(userDetail.getName(), message);
                 }
                 notify = false;
             }
@@ -299,19 +345,21 @@ public class ChatsActivity extends AppCompatActivity {
                     String user = chatsMsg.getUser();
 
                     String msgTime = chatsMsg.getMsgTime();
+                    String msgDate = chatsMsg.getMsgDate();
                     boolean isMessageSeen = chatsMsg.getIsSeenMsg();
+                    boolean isTyping = chatsMsg.isTyping();
                     //  Log.i("_isSeen", isMessageSeen + "");
 
                     if (user.equals(ChatFragment.name)) {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen);
+                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen,isTyping,msgDate);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 1);
 
 
                     } else {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen);
+                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen,isTyping,msgDate);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 2);
                     }
@@ -365,9 +413,4 @@ public class ChatsActivity extends AppCompatActivity {
         onOffLine("offline");
     }
 
-//    @Override
-//    protected void onStop() {
-//        super.onStop();
-//        onOffLine("offline");
-//    }
 }

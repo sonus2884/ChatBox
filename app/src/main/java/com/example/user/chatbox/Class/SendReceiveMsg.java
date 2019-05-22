@@ -6,17 +6,21 @@ public class SendReceiveMsg {
     private int user;
     private String msgTime;
     private boolean isSeenMsg;
+    private  boolean isTyping;
+    private String msgDate;
 
     public SendReceiveMsg() {
 
     }
 
-    public SendReceiveMsg(String msg, int id, String msgTime, boolean isSeenMsg) {
+    public SendReceiveMsg(String msg, int id, String msgTime, boolean isSeenMsg,boolean isTyping,String msgDate) {
 
         this.message = msg;
         this.user = id;
         this.msgTime = msgTime;
         this.isSeenMsg = isSeenMsg;
+        this.isTyping = isTyping;
+        this.msgDate = msgDate;
     }
 
     public int getId() {
@@ -49,5 +53,21 @@ public class SendReceiveMsg {
 
     public void setSeenMsg(boolean seenMsg) {
         isSeenMsg = seenMsg;
+    }
+
+    public boolean isTyping() {
+        return isTyping;
+    }
+
+    public void setTyping(boolean typing) {
+        isTyping = typing;
+    }
+
+    public String getMsgDate() {
+        return msgDate;
+    }
+
+    public void setMsgDate(String msgDate) {
+        this.msgDate = msgDate;
     }
 }
