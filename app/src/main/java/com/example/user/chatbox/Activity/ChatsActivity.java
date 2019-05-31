@@ -61,7 +61,6 @@ public class ChatsActivity extends AppCompatActivity {
     private DatabaseReference mSeenRef;
     private DatabaseReference mTypingRef;
 
-
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<SendReceiveMsg> sendReceiveMessage;
