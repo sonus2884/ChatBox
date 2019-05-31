@@ -3,7 +3,7 @@ package com.example.user.chatbox.Notification;
 public class Data {
 
     private String user;
-    private String icon;
+    private int icon;
     private String body;
     private String title;
     private String sented;
@@ -11,7 +11,7 @@ public class Data {
     public Data() {
     }
 
-    public Data(String user, String icon, String body, String title, String sented) {
+    public Data(String user, int icon, String body, String title, String sented) {
         this.user = user;
         this.icon = icon;
         this.body = body;
@@ -27,11 +27,11 @@ public class Data {
         this.user = user;
     }
 
-    public String getIcon() {
+    public int getIcon() {
         return icon;
     }
 
-    public void setIcon(String icon) {
+    public void setIcon(int icon) {
         this.icon = icon;
     }
 

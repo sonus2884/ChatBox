@@ -23,7 +23,6 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private DatabaseReference mReference;
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 //            Intent intent = new Intent(MainActivity.this, LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //            startActivity(intent);
             //onBackPressed();
-            finish();
+            //finish();
             return true;
         }
 
@@ -106,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         onOffLine("offline");
     }
-
 
 
 }

@@ -4,7 +4,7 @@
             "outputFile": "D:\\NewProjects\\ChatBox\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-fa\\values-fa.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.1.aar\\040f6b44c691d74d82e4eb1177334258\\res\\values-fa\\values-fa.xml",
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.1.0.aar\\d88e3a8dbb5373a083b0f1d0d1441248\\res\\values-fa\\values-fa.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -18,6 +18,23 @@
                         "startOffsets": "105,215,318,429,513,616,731,810,888,969,1081,1184,1282,1392,1496,1605,1766,4706",
                         "endColumns": "109,102,110,83,102,114,78,77,80,111,102,97,109,103,108,160,100,80",
                         "endOffsets": "210,313,424,508,611,726,805,883,964,1076,1179,1277,1387,1491,1600,1761,1862,4782"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.0.aar\\95bb9da81e8487a5da741c1501e02932\\res\\values-fa\\values-fa.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "39",
+                        "startColumns": "4",
+                        "startOffsets": "4787",
+                        "endColumns": "100",
+                        "endOffsets": "4883"
                     }
                 },
                 {
@@ -69,23 +86,6 @@
                         "startOffsets": "1867,1977,2168,2301,2406,2605,2735,2880,3225,3437,3549,3752,3887,4101,4289,4385,4483",
                         "endColumns": "109,190,132,104,198,129,144,130,211,111,202,134,213,187,95,97,113",
                         "endOffsets": "1972,2163,2296,2401,2600,2730,2875,3006,3432,3544,3747,3882,4096,4284,4380,4478,4592"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\user\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\538a9c9f3774e6fd184d623e2d01b49e\\res\\values-fa\\values-fa.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "39",
-                        "startColumns": "4",
-                        "startOffsets": "4787",
-                        "endColumns": "100",
-                        "endOffsets": "4883"
                     }
                 }
             ]

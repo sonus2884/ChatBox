@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -98,6 +99,7 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
     private TextView seen_msg;
     private LinearLayout header;
     private TextView date_tv;
+    private ImageView send_view_msg;
 
 
     SendMessageHolder(View itemView) {
@@ -105,8 +107,8 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
 
         sendText = itemView.findViewById(R.id.sendText);
         sendMsgTime = itemView.findViewById(R.id.sendMsgTime);
-        seen_msg = itemView.findViewById(R.id.text_seen);
-
+        //seen_msg = itemView.findViewById(R.id.text_seen);
+        send_view_msg = itemView.findViewById(R.id.send_view_msg);
         header = itemView.findViewById(R.id.header);
         date_tv = itemView.findViewById(R.id.date_tv);
 
@@ -117,14 +119,18 @@ class SendMessageHolder extends RecyclerView.ViewHolder {
 
         sendText.setText(message.getMessage());
         sendMsgTime.setText(message.getMsgTime());
-        if (p == msg.size() - 1) {
+        if (p >=0) {
             if (message.isSeenMsg()) {
-                seen_msg.setText("seen");
+               // seen_msg.setText("seen");
+                send_view_msg.setImageResource(R.drawable.ic_seen_msg);
             } else {
-                seen_msg.setText("deliver");
+               // seen_msg.setText("deliver");
+                send_view_msg.setImageResource(R.drawable.ic_send_message);
             }
         } else {
             seen_msg.setVisibility(View.GONE);
+            send_view_msg.setVisibility(View.GONE);
+
         }
 
         date_tv.setText(message.getMsgDate());

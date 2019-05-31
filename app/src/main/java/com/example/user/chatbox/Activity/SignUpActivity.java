@@ -156,7 +156,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                             progressBar.setVisibility(View.INVISIBLE);
 
-                            mDatabaseRef = FirebaseDatabase.getInstance().getReference("User details").child(mAuth.getUid());
+                            mDatabaseRef = FirebaseDatabase.getInstance().getReference("User details")
+                                    .child(mAuth.getUid());
                             UserDetail userDetail = new UserDetail();
                             userDetail.setName(name);
                             userDetail.setAbout("");

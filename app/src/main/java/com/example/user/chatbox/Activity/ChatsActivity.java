@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.user.chatbox.Adapters.ChatAdapter;
 import com.example.user.chatbox.Adapters.RecyclerViewAdapter;
@@ -73,6 +74,7 @@ public class ChatsActivity extends AppCompatActivity {
     // Typing..
     private boolean typingStart;
 
+    // Notification..
     private APIServices apiServices;
     private boolean notify = false;
 
@@ -81,8 +83,6 @@ public class ChatsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chats);
 
-
-//        onOffLine("online");
         messageText = findViewById(R.id.messageText);
         recyclerView = findViewById(R.id.recyclerView);
         sendButton = findViewById(R.id.sendImage);
@@ -91,6 +91,7 @@ public class ChatsActivity extends AppCompatActivity {
         titleText.setText(RecyclerViewAdapter.name1);
 
         android.support.v7.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+        //https://fcm.googleapis.com/fcm/send
 
         apiServices = Client.getClient("https://fcm.googleapis.com/").create(APIServices.class);
 
@@ -117,11 +118,8 @@ public class ChatsActivity extends AppCompatActivity {
                     .into(chatProfImage);
         }
 
-
         retrieveMsg();
         init();
-
-
     }
 
 
@@ -134,13 +132,11 @@ public class ChatsActivity extends AppCompatActivity {
 
     private void init() {
 
-
         messageText.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
@@ -177,7 +173,7 @@ public class ChatsActivity extends AppCompatActivity {
     // IS Typing ...
 
     private void isTyping(final boolean typing) {
-        Log.i("_Typing", typingStart+"");
+        Log.i("_Typing", typingStart + "");
         mTypingRef = FirebaseDatabase.getInstance().getReference("Messages")
                 .child(RecyclerViewAdapter.name1 + "_" + ChatFragment.name);
 
@@ -204,7 +200,6 @@ public class ChatsActivity extends AppCompatActivity {
 
     // Seen Message..
     private void seenMessage() {
-        notify = true;
 
         mSeenRef = FirebaseDatabase.getInstance().getReference("Messages")
                 .child(RecyclerViewAdapter.name1 + "_" + ChatFragment.name);
@@ -231,6 +226,7 @@ public class ChatsActivity extends AppCompatActivity {
     }
 
     public void send(View view) {
+        notify = true;
         String msg = messageText.getText().toString().trim();
 
         Date currentTime = Calendar.getInstance().getTime();
@@ -259,26 +255,26 @@ public class ChatsActivity extends AppCompatActivity {
         //Notification Sending..
 
         final String message = msg;
-        DatabaseReference mReference = FirebaseDatabase.getInstance().getReference().child("User details")
-                .child(mAuth.getUid());
-        mReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-
-                UserDetail userDetail = dataSnapshot.getValue(UserDetail.class);
-                //Log.i("_nn",userDetail.getName());
-                if (notify) {
-                    // sendNotification(userDetail.getName(), message);
-                }
-                notify = false;
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
+        sendNotification(ChatFragment.name,message);
+//        DatabaseReference mReference = FirebaseDatabase.getInstance().getReference().child("User details")
+//                .child(mAuth.getUid());
+//        mReference.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(DataSnapshot dataSnapshot) {
+//
+//
+//                UserDetail userDetail = dataSnapshot.getValue(UserDetail.class);
+//                if (notify) {
+//                    sendNotification(userDetail.getName(), message);
+//                }
+//                notify = false;
+//            }
+//
+//            @Override
+//            public void onCancelled(DatabaseError databaseError) {
+//
+//            }
+//        });
 
 
     }
@@ -288,6 +284,8 @@ public class ChatsActivity extends AppCompatActivity {
 
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query query = tokens.orderByKey().equalTo(RecyclerViewAdapter.receiverUid);
+       // Log.i("_token",tokens.orderByKey() + "####" + RecyclerViewAdapter.receiverUid +"--"+query);
+
         query.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -295,7 +293,7 @@ public class ChatsActivity extends AppCompatActivity {
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
 
                     Token token = ds.getValue(Token.class);
-                    Data data = new Data(mAuth.getUid(), "" + R.mipmap.ic_launcher, userName + ": " + message,
+                    Data data = new Data(mAuth.getUid(), R.mipmap.ic_launcher, userName + ": " + message,
                             "New Message", RecyclerViewAdapter.receiverUid);
 
                     Sender sender = new Sender(data, token.getToken());
@@ -304,10 +302,13 @@ public class ChatsActivity extends AppCompatActivity {
                                 @Override
                                 public void onResponse(Call<MyResponse> call, Response<MyResponse> response) {
                                     if (response.code() == 200) {
-//                                        if (response.body().success != 1){
-//                                            Toast.makeText(ChatsActivity.this, "Failed Notification",
-//                                                    Toast.LENGTH_SHORT).show();
-//                                        }
+                                        if (response.isSuccessful()) {
+                                            Toast.makeText(ChatsActivity.this, " Notification send",
+                                                    Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            Toast.makeText(ChatsActivity.this, " Notification failed",
+                                                    Toast.LENGTH_SHORT).show();
+                                        }
                                     }
                                 }
 
@@ -352,14 +353,14 @@ public class ChatsActivity extends AppCompatActivity {
 
                     if (user.equals(ChatFragment.name)) {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen,isTyping,msgDate);
+                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen, isTyping, msgDate);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 1);
 
 
                     } else {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen,isTyping,msgDate);
+                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen, isTyping, msgDate);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 2);
                     }

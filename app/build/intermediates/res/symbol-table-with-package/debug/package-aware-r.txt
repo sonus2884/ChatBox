@@ -863,7 +863,9 @@ drawable ic_edit
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_person_black
+drawable ic_seen_msg
 drawable ic_send
+drawable ic_send_message
 drawable ic_visibility_black
 drawable ic_visibility_off
 drawable navigation_empty_icon
@@ -1079,6 +1081,7 @@ id select_dialog_listview
 id sendImage
 id sendMsgTime
 id sendText
+id send_view_msg
 id setting
 id shortcut
 id showCustom
@@ -1114,7 +1117,6 @@ id textAbout
 id textSpacerNoButtons
 id textSpacerNoTitle
 id text_input_password_toggle
-id text_seen
 id textinput_counter
 id textinput_error
 id time
