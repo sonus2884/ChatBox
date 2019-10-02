@@ -148,9 +148,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
                             ChatsMsg chat = ds.getValue(ChatsMsg.class);
                             //Log.i("_key", chat.getMessage());
+                            if (chat != null && chat.getMessage() != null) {
+                                theLastMessage = chat.getMessage();
+                                theLastMsgDate = chat.getMsgDate();
+                            }
 
-                            theLastMessage = chat.getMessage();
-                            theLastMsgDate = chat.getMsgDate();
                         }
 
                         switch (theLastMessage) {

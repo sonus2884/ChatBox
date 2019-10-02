@@ -1,12 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
 MERGED from [com.android.support:design:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\c7777d0fd71b4618699b520c097d1c97\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\d88e3a8dbb5373a083b0f1d0d1441248\AndroidManifest.xml:17:1-22:12
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\android-image-cropper-2.7.0.aar\88fd2591b6a277d21b76f1dfb55a2675\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\040f6b44c691d74d82e4eb1177334258\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\62d264badca053e800ab31efcab4f167\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:transition:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\c039db268b824d298d1d2535d2e71519\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:15:1-36:12
 MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-auth-17.0.0.aar\4385c6979db88576acf110c3479dc4f1\AndroidManifest.xml:17:1-42:12
 MERGED from [com.google.firebase:firebase-messaging:17.4.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-messaging-17.4.0.aar\43e63bed8ea0628a66ed7a9f76776606\AndroidManifest.xml:17:1-37:12
@@ -22,59 +24,41 @@ MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users
 MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-stats-16.0.1.aar\b18455871f8baffa2c5eae36761308df\AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\141e6773fe06a20e2a1b309b4bcc2790\AndroidManifest.xml:17:1-28:12
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\8036a21e54c3ed41816c03f0eefcfe65\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\74a997271521c883f826d09f2771dd20\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\3c75e0d59531c62c50f169447e6f218a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\ce1a5fd1cccdbca8dca683909a93eb7e\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\52328bef5390dda7d1e5fc3aee204317\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\7566164fbc06cf2e7a3a0bc04099721b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\c039db268b824d298d1d2535d2e71519\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\904a28fe567529dcc30d79de66aa757a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\95bb9da81e8487a5da741c1501e02932\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\e0d6c06c16216fdcdc934c743040171d\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\ef6b08e01c85c3a639242e31c6f7d6b1\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\5b29da9310b853e3ad97375132d3239a\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7c90968cadff5e45bbd45fa19c086ed5\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\45ff0e81de241823a4e4897e3e1faaa0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\538a9c9f3774e6fd184d623e2d01b49e\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\1ddfa1d5455740b7f66976752674c8a2\AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6900aea36ff3bed194e8f212b45ccf54\AndroidManifest.xml:2:1-11:12
 MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a80e06b58c203f0662404ba8e3ab7553\AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.1.aar\428defade58a521ff404c2abf947ace8\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\798680af08381d2be0c4be0a5305e759\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\d29ae009d6bb35540288bac9d01c2e13\AndroidManifest.xml:2:1-7:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\51f64ca3f1f11b6e05941a46e1e9f934\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bcd5584cd640572fc46af70c8d5123e7\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d19df60b5d9eff0ee52c8cf0c513970f\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
-INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bcd5584cd640572fc46af70c8d5123e7\AndroidManifest.xml:17:1-22:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
+INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-51:12
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:1-57:12
 		INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.INTERNET
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:5:5-67
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-storage-17.0.0.aar\1e37e55d81777dace30fe5fc70b9583d\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-storage-17.0.0.aar\1e37e55d81777dace30fe5fc70b9583d\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\9f1275a8a8ff108f610900904e25ddb9\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\9f1275a8a8ff108f610900904e25ddb9\AndroidManifest.xml:23:5-67
-	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:5:22-64
-uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:6:5-81
-	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:6:22-78
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:7:5-80
-	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:7:22-77
 application
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:9:5-49:19
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:5:5-50:19
 MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:28:5-34:19
 MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:28:5-34:19
 MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-auth-17.0.0.aar\4385c6979db88576acf110c3479dc4f1\AndroidManifest.xml:23:5-40:19
@@ -106,101 +90,133 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\us
 MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a80e06b58c203f0662404ba8e3ab7553\AndroidManifest.xml:9:5-20
 MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a80e06b58c203f0662404ba8e3ab7553\AndroidManifest.xml:9:5-20
 	android:supportsRtl
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:14:9-35
-	android:label
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:12:9-41
-	android:roundIcon
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:13:9-54
-	android:icon
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:11:9-43
-	android:allowBackup
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:6:9-35
 	android:theme
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:15:9-40
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:11:9-40
+activity#com.example.user.chatbox.Activity.ChatGalleryImgActivity
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:12:9-78
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:12:19-66
 activity#com.example.user.chatbox.Activity.MainActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:16:9-59
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:13:9-59
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:16:19-56
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:13:19-56
 activity#com.example.user.chatbox.Activity.StatusActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:17:9-61
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:14:9-61
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:17:19-58
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:14:19-58
 activity#com.example.user.chatbox.Activity.CameraActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:18:9-61
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:15:9-61
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:18:19-58
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:15:19-58
 activity#com.example.user.chatbox.Activity.LoginActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:19:9-25:20
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:16:9-23:20
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:19:19-57
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:16:19-57
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:20:13-24:29
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:17:13-21:29
 action#android.intent.action.MAIN
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:23:17-77
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:20:17-77
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:23:27-74
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:20:27-74
+activity#com.theartofdev.edmodo.cropper.CropImageActivity
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:24:9-25:55
+	android:theme
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:25:13-53
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:24:19-82
 activity#com.example.user.chatbox.Activity.SignUpActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:26:9-61
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:27:9-61
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:26:19-58
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:27:19-58
 activity#com.example.user.chatbox.Camera2Activity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:27:9-53
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:28:9-53
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:27:19-50
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:28:19-50
 activity#com.example.user.chatbox.Activity.ChatsActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:28:9-60
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:9-60
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:28:19-57
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:19-57
 activity#com.example.user.chatbox.Activity.ProfileActivity
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:9-62
-	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:29:19-59
-activity#com.example.user.chatbox.Activity.AboutUsActivity
 ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:9-62
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:30:19-59
+activity#com.example.user.chatbox.Activity.AboutUsActivity
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:31:9-62
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:31:19-59
 service#com.example.user.chatbox.Notification.MyFirebaseIdService
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:32:9-39:19
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:33:9-40:19
 	android:enabled
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:33:13-35
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:35:13-35
 	android:exported
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:34:13-36
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:36:13-36
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:32:18-66
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:34:13-61
 intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:36:13-38:29
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:37:13-39:29
 action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:37:17-80
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:38:17-80
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:37:25-77
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:38:25-77
 service#com.example.user.chatbox.Notification.MyFirebaseMessaging
 ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:41:9-48:19
 	android:enabled
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:42:13-35
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:43:13-35
 	android:exported
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:43:13-36
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:44:13-36
 	android:name
-		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:41:18-66
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:42:13-61
 intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
 ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:45:13-47:29
 action#com.google.firebase.MESSAGING_EVENT
 ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:46:17-78
 	android:name
 		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:46:25-75
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:52:5-81
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:52:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:53:5-80
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:53:22-77
+uses-permission#android.permission.INTERNET
+ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:55:5-67
+MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-storage-17.0.0.aar\1e37e55d81777dace30fe5fc70b9583d\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-storage-17.0.0.aar\1e37e55d81777dace30fe5fc70b9583d\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\9f1275a8a8ff108f610900904e25ddb9\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:17.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-iid-17.1.0.aar\9f1275a8a8ff108f610900904e25ddb9\AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml:55:22-64
 uses-sdk
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 MERGED from [com.android.support:design:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\c7777d0fd71b4618699b520c097d1c97\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:design:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\design-27.1.0.aar\c7777d0fd71b4618699b520c097d1c97\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\d88e3a8dbb5373a083b0f1d0d1441248\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.0.aar\d88e3a8dbb5373a083b0f1d0d1441248\AndroidManifest.xml:20:5-44
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\android-image-cropper-2.7.0.aar\88fd2591b6a277d21b76f1dfb55a2675\AndroidManifest.xml:7:5-9:41
+MERGED from [com.theartofdev.edmodo:android-image-cropper:2.7.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\android-image-cropper-2.7.0.aar\88fd2591b6a277d21b76f1dfb55a2675\AndroidManifest.xml:7:5-9:41
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\040f6b44c691d74d82e4eb1177334258\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\appcompat-v7-27.1.1.aar\040f6b44c691d74d82e4eb1177334258\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\62d264badca053e800ab31efcab4f167\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:recyclerview-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-27.1.0.aar\62d264badca053e800ab31efcab4f167\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\c039db268b824d298d1d2535d2e71519\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\c039db268b824d298d1d2535d2e71519\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-17.0.0.aar\fb0ca79beab18279795f61f4649bb988\AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-auth-17.0.0.aar\4385c6979db88576acf110c3479dc4f1\AndroidManifest.xml:21:5-44
@@ -231,38 +247,38 @@ MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\user
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\play-services-basement-16.1.0.aar\141e6773fe06a20e2a1b309b4bcc2790\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\8036a21e54c3ed41816c03f0eefcfe65\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-v4-27.1.0.aar\8036a21e54c3ed41816c03f0eefcfe65\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\74a997271521c883f826d09f2771dd20\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.0.aar\74a997271521c883f826d09f2771dd20\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\3c75e0d59531c62c50f169447e6f218a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.0.aar\3c75e0d59531c62c50f169447e6f218a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\ce1a5fd1cccdbca8dca683909a93eb7e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.0.aar\ce1a5fd1cccdbca8dca683909a93eb7e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\52328bef5390dda7d1e5fc3aee204317\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.0.aar\52328bef5390dda7d1e5fc3aee204317\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\7566164fbc06cf2e7a3a0bc04099721b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.0.aar\7566164fbc06cf2e7a3a0bc04099721b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\c039db268b824d298d1d2535d2e71519\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\transition-27.1.0.aar\c039db268b824d298d1d2535d2e71519\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\904a28fe567529dcc30d79de66aa757a\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-media-compat:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-media-compat-27.1.0.aar\904a28fe567529dcc30d79de66aa757a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\95bb9da81e8487a5da741c1501e02932\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.0.aar\95bb9da81e8487a5da741c1501e02932\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\e0d6c06c16216fdcdc934c743040171d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-fragment-27.1.1.aar\e0d6c06c16216fdcdc934c743040171d\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\ef6b08e01c85c3a639242e31c6f7d6b1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-27.1.1.aar\ef6b08e01c85c3a639242e31c6f7d6b1\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\5b29da9310b853e3ad97375132d3239a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-ui-27.1.1.aar\5b29da9310b853e3ad97375132d3239a\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7c90968cadff5e45bbd45fa19c086ed5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-core-utils-27.1.1.aar\7c90968cadff5e45bbd45fa19c086ed5\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\45ff0e81de241823a4e4897e3e1faaa0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-27.1.1.aar\45ff0e81de241823a4e4897e3e1faaa0\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\538a9c9f3774e6fd184d623e2d01b49e\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\support-compat-27.1.1.aar\538a9c9f3774e6fd184d623e2d01b49e\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\1ddfa1d5455740b7f66976752674c8a2\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:cardview-v7:27.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\cardview-v7-27.1.0.aar\1ddfa1d5455740b7f66976752674c8a2\AndroidManifest.xml:20:5-44
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6900aea36ff3bed194e8f212b45ccf54\AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\user\.gradle\caches\transforms-1\files-1.1\constraint-layout-1.1.3.aar\6900aea36ff3bed194e8f212b45ccf54\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a80e06b58c203f0662404ba8e3ab7553\AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:2.2.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\circleimageview-2.2.0.aar\a80e06b58c203f0662404ba8e3ab7553\AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.1.aar\428defade58a521ff404c2abf947ace8\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:exifinterface:27.1.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\exifinterface-27.1.1.aar\428defade58a521ff404c2abf947ace8\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\798680af08381d2be0c4be0a5305e759\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\798680af08381d2be0c4be0a5305e759\AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\d29ae009d6bb35540288bac9d01c2e13\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\user\.gradle\caches\transforms-1\files-1.1\firebase-database-collection-16.0.1.aar\d29ae009d6bb35540288bac9d01c2e13\AndroidManifest.xml:5:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\51f64ca3f1f11b6e05941a46e1e9f934\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\livedata-core-1.1.0.aar\51f64ca3f1f11b6e05941a46e1e9f934\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bcd5584cd640572fc46af70c8d5123e7\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bcd5584cd640572fc46af70c8d5123e7\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d19df60b5d9eff0ee52c8cf0c513970f\AndroidManifest.xml:20:5-44
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\runtime-1.1.0.aar\d19df60b5d9eff0ee52c8cf0c513970f\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bcd5584cd640572fc46af70c8d5123e7\AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\user\.gradle\caches\transforms-1\files-1.1\viewmodel-1.1.0.aar\bcd5584cd640572fc46af70c8d5123e7\AndroidManifest.xml:20:5-44
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 INJECTED from D:\NewProjects\ChatBox\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion

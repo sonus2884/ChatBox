@@ -1,5 +1,6 @@
 package com.example.user.chatbox.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -32,7 +33,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText emailText;
     private ImageView visibilityOn;
     private ImageView visibilityOff;
-    private ProgressBar progressBar;
+//    private ProgressBar progressBar;
+    private ProgressDialog progressDialog;
     private RelativeLayout backgroundRelativeLayout;
     private Button signInButton;
     private FirebaseAuth mAuth;
@@ -49,7 +51,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         TextInputLayout passwordTextWrapper = findViewById(R.id.passwordTextWrapper);
         passwordText = findViewById(R.id.passwordText);
         emailText = findViewById(R.id.emailText);
-        progressBar = findViewById(R.id.spinner);
+//        progressBar = findViewById(R.id.spinner);
         visibilityOn = findViewById(R.id.visibilityOn);
         visibilityOff = findViewById(R.id.visibilityOff);
         backgroundRelativeLayout = findViewById(R.id.backgroundRelativeLayout);
@@ -100,7 +102,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             passwordText.setError("Please enter  password!");
             return;
         }
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
+
+        progressDialog = new ProgressDialog(LoginActivity.this);
+        progressDialog.setMessage("Login..."); // Setting Message
+        progressDialog.setTitle("ChatApp Login"); // Setting Title
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+        progressDialog.show(); // Display Progress Dialog
+        progressDialog.setCancelable(false);
 
         Log.i("_Email", email);
         Log.i("_Password", password);
@@ -112,12 +121,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()) {
-                            progressBar.setVisibility(View.INVISIBLE);
+//                            progressBar.setVisibility(View.INVISIBLE);
+                            progressDialog.dismiss();
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                             startActivity(intent);
                             finish();
                         } else {
-                            progressBar.setVisibility(View.INVISIBLE);
+//                            progressBar.setVisibility(View.INVISIBLE);
+                            progressDialog.dismiss();
                             Toast.makeText(LoginActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
 

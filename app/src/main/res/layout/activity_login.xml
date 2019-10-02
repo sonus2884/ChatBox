@@ -147,13 +147,13 @@
             android:textSize="18sp"
             android:textStyle="normal" />
 
-        <ProgressBar
-            android:id="@+id/spinner"
-            style="@style/Widget.AppCompat.ProgressBar"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_centerInParent="true"
-            android:visibility="invisible" />
+<!--        <ProgressBar-->
+<!--            android:id="@+id/spinner"-->
+<!--            style="@style/Widget.AppCompat.ProgressBar"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:visibility="invisible" />-->
 
     </RelativeLayout>
 

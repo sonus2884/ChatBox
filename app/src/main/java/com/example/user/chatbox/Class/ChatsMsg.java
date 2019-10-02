@@ -8,6 +8,7 @@ public class ChatsMsg {
     private String msgTime;
     private boolean isSeenMsg;
     private boolean isTyping;
+    private String image_message;
 
 
     public ChatsMsg() {
@@ -20,6 +21,14 @@ public class ChatsMsg {
         this.user = user;
 
         //this.msgTime = msgTime;
+    }
+
+    public String getImage_message() {
+        return image_message;
+    }
+
+    public void setImage_message(String image_message) {
+        this.image_message = image_message;
     }
 
     public String getMessage() {

@@ -1,5 +1,6 @@
 package com.example.user.chatbox.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -19,9 +20,7 @@ import com.example.user.chatbox.Adapters.ChatAdapter;
 import com.example.user.chatbox.Adapters.RecyclerViewAdapter;
 import com.example.user.chatbox.Class.ChatsMsg;
 import com.example.user.chatbox.Class.SendReceiveMsg;
-import com.example.user.chatbox.Class.UserDetail;
 import com.example.user.chatbox.Fragments.APIServices;
-import com.example.user.chatbox.Fragments.BottomSheetFragment;
 import com.example.user.chatbox.Fragments.ChatFragment;
 import com.example.user.chatbox.Notification.Client;
 import com.example.user.chatbox.Notification.Data;
@@ -136,6 +135,7 @@ public class ChatsActivity extends AppCompatActivity {
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
             }
+
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
 
@@ -254,7 +254,7 @@ public class ChatsActivity extends AppCompatActivity {
         //Notification Sending..
 
         final String message = msg;
-        sendNotification(ChatFragment.name,message);
+        sendNotification(ChatFragment.name, message);
 //        DatabaseReference mReference = FirebaseDatabase.getInstance().getReference().child("User details")
 //                .child(mAuth.getUid());
 //        mReference.addValueEventListener(new ValueEventListener() {
@@ -283,7 +283,7 @@ public class ChatsActivity extends AppCompatActivity {
 
         DatabaseReference tokens = FirebaseDatabase.getInstance().getReference("Tokens");
         Query query = tokens.orderByKey().equalTo(RecyclerViewAdapter.receiverUid);
-       // Log.i("_token",tokens.orderByKey() + "####" + RecyclerViewAdapter.receiverUid +"--"+query);
+        // Log.i("_token",tokens.orderByKey() + "####" + RecyclerViewAdapter.receiverUid +"--"+query);
 
         query.addValueEventListener(new ValueEventListener() {
             @Override
@@ -346,20 +346,21 @@ public class ChatsActivity extends AppCompatActivity {
 
                     String msgTime = chatsMsg.getMsgTime();
                     String msgDate = chatsMsg.getMsgDate();
+                    String imageMessage=chatsMsg.getImage_message();
                     boolean isMessageSeen = chatsMsg.getIsSeenMsg();
                     boolean isTyping = chatsMsg.isTyping();
                     //  Log.i("_isSeen", isMessageSeen + "");
 
                     if (user.equals(ChatFragment.name)) {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen, isTyping, msgDate);
+                        sendReceiveMsg = new SendReceiveMsg(message, 1, msgTime, isMessageSeen, isTyping, msgDate,imageMessage);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 1);
 
 
                     } else {
 
-                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen, isTyping, msgDate);
+                        sendReceiveMsg = new SendReceiveMsg(message, 2, msgTime, isMessageSeen, isTyping, msgDate,imageMessage);
                         sendReceiveMessage.add(sendReceiveMsg);
                         // addMessageBox(message, 2);
                     }
@@ -383,11 +384,12 @@ public class ChatsActivity extends AppCompatActivity {
 
     }
 
+    //Image Cropper...
     public void attachedFile(View view) {
 
-        BottomSheetFragment mBottomSheetFragment = new BottomSheetFragment();
-        mBottomSheetFragment.show(getSupportFragmentManager(), mBottomSheetFragment.getTag());
-
+        Intent intent=new Intent(ChatsActivity.this,ChatGalleryImgActivity.class);
+        startActivity(intent);
+        finish();
 
     }
 

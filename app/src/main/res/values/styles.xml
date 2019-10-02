@@ -18,4 +18,11 @@
         <item name="colorAccent">@color/colorWhite</item> <!-- Whatever color you want-->
     </style>
 
+    <style name="AppThemeCropImage" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
 </resources>

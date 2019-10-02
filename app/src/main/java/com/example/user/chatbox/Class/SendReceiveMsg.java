@@ -3,6 +3,7 @@ package com.example.user.chatbox.Class;
 public class SendReceiveMsg {
 
     private String message;
+    private String image_message;
     private int user;
     private String msgTime;
     private boolean isSeenMsg;
@@ -13,7 +14,7 @@ public class SendReceiveMsg {
 
     }
 
-    public SendReceiveMsg(String msg, int id, String msgTime, boolean isSeenMsg,boolean isTyping,String msgDate) {
+    public SendReceiveMsg(String msg, int id, String msgTime, boolean isSeenMsg,boolean isTyping,String msgDate,String image_message) {
 
         this.message = msg;
         this.user = id;
@@ -21,6 +22,7 @@ public class SendReceiveMsg {
         this.isSeenMsg = isSeenMsg;
         this.isTyping = isTyping;
         this.msgDate = msgDate;
+        this.image_message=image_message;
     }
 
     public int getId() {
@@ -69,5 +71,13 @@ public class SendReceiveMsg {
 
     public void setMsgDate(String msgDate) {
         this.msgDate = msgDate;
+    }
+
+    public String getImage_message() {
+        return image_message;
+    }
+
+    public void setImage_message(String image_message) {
+        this.image_message = image_message;
     }
 }

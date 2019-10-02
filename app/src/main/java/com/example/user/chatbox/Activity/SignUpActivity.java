@@ -1,5 +1,6 @@
 package com.example.user.chatbox.Activity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -36,7 +37,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private RelativeLayout backgroundRelativeLayout;
     private String password;
     private FirebaseAuth mAuth;
-    private ProgressBar progressBar;
+//    private ProgressBar progressBar;
+    private ProgressDialog progressDialog;
     private EditText nameText;
     private DatabaseReference mDatabaseRef;
 
@@ -63,7 +65,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         nameText = findViewById(R.id.nameText1);
 
         signUpButton = findViewById(R.id.signUpButton);
-        progressBar = findViewById(R.id.spinner);
+//        progressBar = findViewById(R.id.spinner);
         backgroundRelativeLayout = findViewById(R.id.backgroundRelativeLayout);
         backgroundRelativeLayout.setOnClickListener(this);
 
@@ -140,7 +142,13 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
-        progressBar.setVisibility(View.VISIBLE);
+//        progressBar.setVisibility(View.VISIBLE);
+        progressDialog = new ProgressDialog(SignUpActivity.this);
+        progressDialog.setMessage("Sign up..."); // Setting Message
+        progressDialog.setTitle("ChatApp SignUp"); // Setting Title
+        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER); // Progress Dialog Style Spinner
+        progressDialog.show(); // Display Progress Dialog
+        progressDialog.setCancelable(false);
 
         Log.i("_Email", email);
         Log.i("_Password", password);
@@ -154,7 +162,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
                         if (task.isSuccessful()) {
 
-                            progressBar.setVisibility(View.INVISIBLE);
+//                            progressBar.setVisibility(View.INVISIBLE);
+                            progressDialog.dismiss();
 
                             mDatabaseRef = FirebaseDatabase.getInstance().getReference("User details")
                                     .child(mAuth.getUid());
@@ -169,7 +178,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             startActivity(intent);
                             finish();
                         } else {
-                            progressBar.setVisibility(View.INVISIBLE);
+//                            progressBar.setVisibility(View.INVISIBLE);
+                            progressDialog.dismiss();
                             Toast.makeText(SignUpActivity.this, task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
 
@@ -178,7 +188,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 .addOnFailureListener(this, new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        progressBar.setVisibility(View.INVISIBLE);
+//                        progressBar.setVisibility(View.INVISIBLE);
+                        progressDialog.dismiss();
 
                         if (e != null) {
 

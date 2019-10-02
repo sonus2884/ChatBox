@@ -26,14 +26,15 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/receive_msg_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/header"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
         android:background="@drawable/receive_bgs"
-        android:padding="8dp">
+        android:padding="8dp"
+        android:visibility="gone">
 
 
         <TextView
@@ -57,6 +58,44 @@
             android:text="12:00Am"
             android:textColor="@color/colorBlack"
             android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/receive_image_layout"
+        android:layout_width="270dp"
+        android:layout_height="230dp"
+        android:layout_below="@id/header"
+        android:layout_marginTop="6dp"
+        android:background="@drawable/receive_bgs"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/receive_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@color/colorAccent"
+            android:layout_marginTop="2dip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dip" />
+
+        <TextView
+            android:id="@+id/receive_img_time"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="12:00 AM"
+            android:layout_alignParentBottom="true"
+           android:layout_alignParentRight="true"
+            android:layout_marginRight="8dp"
+            android:elevation="4dp"
+            android:padding="4dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:layout_marginBottom="4dp"/>
 
     </RelativeLayout>
 
